@@ -1,6 +1,8 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
+using System.Threading;
 
 namespace ToolsQA.TestsCases
 {
@@ -11,8 +13,7 @@ namespace ToolsQA.TestsCases
         public BaseTest()
         {
             _driver = new FirefoxDriver();
-
-            _driver.Url = "http://localhost:36174/";
+            _driver.Url = "http://new.omega-auto.biz/";
         }
 
         protected void WaitForAngular()
@@ -28,8 +29,11 @@ namespace ToolsQA.TestsCases
             {
                 wait.Until<bool>(driver => bool.Parse(((IJavaScriptExecutor)driver).ExecuteScript(angularReadyScript).ToString()));
             }
+
+            Thread.Sleep(1000);
         }
 
+        [TearDown]
         public void End()
         {
             _driver.Close();

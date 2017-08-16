@@ -16,9 +16,7 @@ namespace ToolsQA.TestsCases
             WaitForAngular();
 
             Assert.IsTrue(_driver.Url.Contains("dashboard"));
-            End();
         }
-
 
     }
 }

@@ -27,9 +27,9 @@ namespace ToolsQA.pages
 
         public void LoginToApplication()
         {
-            UserName.SendKeys("skytechdev06");
-            Password.SendKeys("htpth8fwbz");
-            Submit.Submit();
+            UserName.SendKeys("Панов Максим");
+            Password.SendKeys("aere7bvf");
+            Submit.Click();
         }
     }
 }

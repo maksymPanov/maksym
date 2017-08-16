@@ -10,3 +10,15 @@ c:\users\aleksandr.rezenkov\documents\visual studio 2015\Projects\ToolsQA\ToolsQ
 c:\users\aleksandr.rezenkov\documents\visual studio 2015\Projects\ToolsQA\ToolsQA\bin\Debug\nunit.framework.xml
 C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\ToolsQA\ToolsQA\bin\Debug\WebDriver.Support.dll
 C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\ToolsQA\ToolsQA\bin\Debug\WebDriver.Support.xml
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\ToolsQA.exe.config
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.exe
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.pdb
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\ToolsQA.exe
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\ToolsQA.pdb
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\nunit.framework.dll
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.dll
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.Support.dll
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\nunit.framework.xml
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.xml
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.Support.xml
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.csprojResolveAssemblyReference.cache
