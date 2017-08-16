@@ -1,0 +1,12 @@
+c:\users\aleksandr.rezenkov\documents\visual studio 2015\Projects\ToolsQA\ToolsQA\bin\Debug\ToolsQA.exe.config
+c:\users\aleksandr.rezenkov\documents\visual studio 2015\Projects\ToolsQA\ToolsQA\bin\Debug\ToolsQA.exe
+c:\users\aleksandr.rezenkov\documents\visual studio 2015\Projects\ToolsQA\ToolsQA\bin\Debug\ToolsQA.pdb
+c:\users\aleksandr.rezenkov\documents\visual studio 2015\Projects\ToolsQA\ToolsQA\bin\Debug\WebDriver.dll
+c:\users\aleksandr.rezenkov\documents\visual studio 2015\Projects\ToolsQA\ToolsQA\bin\Debug\WebDriver.xml
+c:\users\aleksandr.rezenkov\documents\visual studio 2015\Projects\ToolsQA\ToolsQA\obj\Debug\ToolsQA.exe
+c:\users\aleksandr.rezenkov\documents\visual studio 2015\Projects\ToolsQA\ToolsQA\obj\Debug\ToolsQA.pdb
+c:\users\aleksandr.rezenkov\documents\visual studio 2015\Projects\ToolsQA\ToolsQA\obj\Debug\ToolsQA.csprojResolveAssemblyReference.cache
+c:\users\aleksandr.rezenkov\documents\visual studio 2015\Projects\ToolsQA\ToolsQA\bin\Debug\nunit.framework.dll
+c:\users\aleksandr.rezenkov\documents\visual studio 2015\Projects\ToolsQA\ToolsQA\bin\Debug\nunit.framework.xml
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\ToolsQA\ToolsQA\bin\Debug\WebDriver.Support.dll
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\ToolsQA\ToolsQA\bin\Debug\WebDriver.Support.xml
