@@ -22,3 +22,6 @@ C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest
 C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.xml
 C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.Support.xml
 C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.csprojResolveAssemblyReference.cache
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\Protractor.dll
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\Protractor.pdb
+C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\Protractor.xml

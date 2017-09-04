@@ -1,42 +1,25 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Support.UI;
-using System.Threading;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using System;
 
 namespace ToolsQA.TestsCases
 {
     public class BaseTest
     {
         protected IWebDriver _driver;
+        protected string Url = "http://new.omega-auto.biz/";
 
         public BaseTest()
         {
-            _driver = new FirefoxDriver();
-            _driver.Url = "http://new.omega-auto.biz/";
+            _driver = new ChromeDriver(@"C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\");
+            _driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(15);
+            _driver.Url = Url;
         }
 
-        protected void WaitForAngular()
-        {
-            WebDriverWait wait = new WebDriverWait(_driver, new System.TimeSpan(0, 60, 0));
-            IJavaScriptExecutor jsExec = (IJavaScriptExecutor)_driver;
-
-            var angularReadyScript = "return angular.element(document).injector().get('$http').pendingRequests.length === 0";
-
-            var angularReady = bool.Parse(jsExec.ExecuteScript(angularReadyScript).ToString());
-
-            if (!angularReady)
-            {
-                wait.Until<bool>(driver => bool.Parse(((IJavaScriptExecutor)driver).ExecuteScript(angularReadyScript).ToString()));
-            }
-
-            Thread.Sleep(1000);
-        }
-
-        [TearDown]
-        public void End()
-        {
-            _driver.Close();
-        }
+        //[TearDown]
+        //public void End()
+        //{
+        //    _driver.Quit();
+        //}
     }
 }
