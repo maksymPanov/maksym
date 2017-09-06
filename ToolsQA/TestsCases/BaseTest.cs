@@ -1,25 +1,28 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using Protractor;
 using System;
 
 namespace ToolsQA.TestsCases
 {
     public class BaseTest
     {
-        protected IWebDriver _driver;
-        protected string Url = "http://new.omega-auto.biz/";
+        protected const string Url = "http://new.omega-auto.biz/#/login";
+        protected readonly IWebDriver _driver;
+        protected readonly NgWebDriver _browser;
 
         public BaseTest()
         {
-            _driver = new ChromeDriver(@"C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\");
-            _driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(15);
-            _driver.Url = Url;
+            _driver = new ChromeDriver(System.Reflection.Assembly.GetExecutingAssembly().Location.Replace("ToolsQA.exe", ""));
+            _driver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(40));
+            _browser = new NgWebDriver(_driver);
         }
 
-        //[TearDown]
-        //public void End()
-        //{
-        //    _driver.Quit();
-        //}
+        [TearDown]
+        public void Fisnish()
+        {
+            _browser.Close();
+        }
     }
 }
