@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
@@ -9,6 +10,22 @@ namespace ToolsQA.TestsCases
     {
         public SearchTest() : base() { }
 
+
+        public void WaitUntilAnalogsLoaded()
+        {
+            WebDriverWait wait = new WebDriverWait(_driver, new System.TimeSpan(0, 60, 0));
+            IJavaScriptExecutor jsExec = (IJavaScriptExecutor)_driver;
+
+            var angularReadyScript = "!!angular.element(document).injector().get('$http').pendingRequests.find(t=>t.url.includes('search/getanalogs'))";
+
+            var angularReady = bool.Parse(jsExec.ExecuteScript(angularReadyScript).ToString());
+
+            if (!angularReady)
+            {
+                wait.Until<bool>(driver => bool.Parse(((IJavaScriptExecutor)driver).ExecuteScript(angularReadyScript).ToString()));
+            }
+        }
+
         [Test]
         public void SearchMustBeSuccess()
         {
@@ -16,6 +33,7 @@ namespace ToolsQA.TestsCases
             loginPage.LoginToApplication();
 
             _browser.WaitForAngular();
+            _browser.ExecuteAsyncScript("return angu");
 
             _browser.Navigate().GoToUrl(Url + "/dashboard");
 
