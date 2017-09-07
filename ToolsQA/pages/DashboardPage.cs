@@ -21,9 +21,9 @@ namespace ToolsQA.pages
             PageFactory.InitElements(driver, this);
         }
 
-        public void EnableSearch()
+        public void EnableSearch(string text)
         {
-            SearchInput.SendKeys("4610495");
+            SearchInput.SendKeys(text);
             SearchButton.Click();
         }
     }

@@ -4,6 +4,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using Protractor;
 using System;
+using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
 {
@@ -22,6 +23,16 @@ namespace ToolsQA.TestsCases
 
             Url += "/login";
             _browser.Url = Url;
+        }
+
+        public void LoginOnTheSite()
+        {
+            var loginPage = new LoginPage(_browser);
+            loginPage.LoginToApplication();
+
+            _browser.WaitForAngular();
+
+            _browser.Navigate().GoToUrl(Url + "/dashboard");
         }
 
         public void WaitForElement(string selector)

@@ -12,15 +12,11 @@ namespace ToolsQA.TestsCases
         [Test]
         public void SearchMustBeSuccess()
         {
-            var loginPage = new LoginPage(_browser);
-            loginPage.LoginToApplication();
-
-            _browser.WaitForAngular();
-
-            _browser.Navigate().GoToUrl(Url + "/dashboard");
+            
+            LoginOnTheSite();
 
             var dashboard = new DashboardPage(_browser);
-            dashboard.EnableSearch();
+            dashboard.EnableSearch("4610495");
 
             WaitForElement("addBasket");
 
@@ -30,5 +26,15 @@ namespace ToolsQA.TestsCases
             Assert.DoesNotThrow(() => number = double.Parse(priceText.Replace(".", ",")));
             Assert.Greater(number, 0);
         }
+
+        //[Test]
+        //public void SearchOpenAnalogs()
+        //{
+        //    LoginOnTheSite();
+        //    var dashboard = new DashboardPage(_browser);
+        //    dashboard.EnableSearch();
+
+        //    WaitForElement("addBasket");
+        //}
     }
 }

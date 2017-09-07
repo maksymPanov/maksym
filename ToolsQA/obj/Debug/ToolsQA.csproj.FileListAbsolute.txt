@@ -13,3 +13,18 @@ C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest
 C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.csprojResolveAssemblyReference.cache
 C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.exe
 C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.pdb
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\ToolsQA.exe.config
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\obj\Debug\ToolsQA.exe
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\obj\Debug\ToolsQA.pdb
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\ToolsQA.exe
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\ToolsQA.pdb
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\nunit.framework.dll
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\Protractor.dll
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\WebDriver.dll
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\WebDriver.Support.dll
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\nunit.framework.xml
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\Protractor.pdb
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\Protractor.xml
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\WebDriver.xml
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\WebDriver.Support.xml
+C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\obj\Debug\ToolsQA.csprojResolveAssemblyReference.cache
