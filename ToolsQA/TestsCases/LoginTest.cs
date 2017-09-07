@@ -6,11 +6,11 @@ namespace ToolsQA.TestsCases
     [TestFixture]
     class LoginTest : BaseTest
     {
+        public LoginTest() : base() { }
+
         [Test]
         public void LoginMustBeSuccess()
         {
-            _browser.Url = Url;
-
             var loginPage = new LoginPage(_browser);
             loginPage.LoginToApplication();
 
