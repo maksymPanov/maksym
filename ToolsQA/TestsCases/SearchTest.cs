@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
@@ -8,15 +7,21 @@ namespace ToolsQA.TestsCases
     [TestFixture]
     class SearchTest : BaseTest
     {
-        public SearchTest() : base() { }
+        private readonly DashboardPage dashboard;
+        public SearchTest() : base()
+        {
+            dashboard = new DashboardPage(_browser);
+        }
 
+        [TearDown]
+        public void Clear()
+        {
+            dashboard.Clear();
+        }
 
-      
         [Test]
         public void SimpleSearchMustBeSuccess()
         {
-                                             
-            var dashboard = new DashboardPage(_browser);
             dashboard.EnableSearch("4610495");
             WaitForElementID("addBasket");
             var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;
@@ -29,21 +34,21 @@ namespace ToolsQA.TestsCases
         [Test]
         public void SearchOpenAnalogs()
         {
-            var dashboard = new DashboardPage(_browser);
             dashboard.EnableSearch("6900260289");
             WaitForElementID("addBasket");
             dashboard.LoadMoreAnalogsClick();
             var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;
             double number = 0;
+
             Assert.DoesNotThrow(() => number = double.Parse(priceText.Replace(".", ",")));
             Assert.Greater(number, 0);
         }
         [Test]
         public void OpenAdvancedSearchMustBeSuccess()
         {
-            var dashboard = new DashboardPage(_browser);
             dashboard.OpenAdvancedSearch();
             WaitForElementCSS(".header-main-filter");
+
             Assert.AreEqual(true, _browser.FindElement(By.CssSelector(".header-main-filter")).Displayed);
         }
 
@@ -57,6 +62,6 @@ namespace ToolsQA.TestsCases
             Assert.AreEqual(false, _browser.FindElement(By.CssSelector(".header-main-filter")).Displayed);
         }
 
-       
+
     }
 }

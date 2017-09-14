@@ -30,7 +30,7 @@ namespace ToolsQA.pages
             PageFactory.InitElements(driver, this);
         }
 
-        public void LoadMoreAnalogsClick ()
+        public void LoadMoreAnalogsClick()
         {
             LoadMoreAnalogs.Click();
         }
@@ -38,6 +38,11 @@ namespace ToolsQA.pages
         public void OpenAdvancedSearch()
         {
             AdvancedSearch.Click();
+        }
+
+        public void Clear()
+        {
+            _driver.Navigate().Refresh();
         }
 
         public void EnableSearch(string text)
