@@ -11,11 +11,7 @@ namespace ToolsQA.TestsCases
         [Test]
         public void LoginMustBeSuccess()
         {
-            var loginPage = new LoginPage(_browser);
-            loginPage.LoginToApplication();
-
-            _browser.WaitForAngular();
-
+            
             Assert.IsTrue(_browser.Url.Contains("dashboard"));
         }
     }

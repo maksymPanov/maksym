@@ -15,10 +15,29 @@ namespace ToolsQA.pages
         [CacheLookup]
         private IWebElement SearchButton { get; set; }
 
+        [FindsBy(How = How.CssSelector, Using = ".btn.btn-palegreen.shiny")]
+        [CacheLookup]
+        private IWebElement LoadMoreAnalogs { get; set; }
+
+        [FindsBy(How = How.Id, Using = "navbarIconFilter")]
+        [CacheLookup]
+        private IWebElement AdvancedSearch { get; set; }
+
+
         public DashboardPage(IWebDriver driver)
         {
             _driver = driver;
             PageFactory.InitElements(driver, this);
+        }
+
+        public void LoadMoreAnalogsClick ()
+        {
+            LoadMoreAnalogs.Click();
+        }
+
+        public void OpenAdvancedSearch()
+        {
+            AdvancedSearch.Click();
         }
 
         public void EnableSearch(string text)

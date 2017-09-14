@@ -20,32 +20,56 @@ namespace ToolsQA.TestsCases
             _driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(60);
             _browser = new NgWebDriver(_driver);
             _browser.Manage().Window.Maximize();
-
             Url += "/login";
             _browser.Url = Url;
         }
 
-        public void LoginOnTheSite()
-        {
-            var loginPage = new LoginPage(_browser);
-            loginPage.LoginToApplication();
+        //public void WaitUntilAnalogsLoaded()
+        //{
+        //    WebDriverWait wait = new WebDriverWait(_driver, new System.TimeSpan(0, 60, 0));
+        //    IJavaScriptExecutor jsExec = (IJavaScriptExecutor)_driver;
+        //    var angularReadyScript = "!!angular.element(document).injector().get('$http').pendingRequests.find(t=>t.url.includes('search/getanalogs'))";
+        //    var angularReady = bool.Parse(jsExec.ExecuteScript(angularReadyScript).ToString());
+        //    if (!angularReady)
+        //    {
+        //        wait.Until<bool>(driver => bool.Parse(((IJavaScriptExecutor)driver).ExecuteScript(angularReadyScript).ToString()));
+        //    }
+        //}
 
-            _browser.WaitForAngular();
+        //[SetUp]
+        //public void RunBeforeAllTestLigin()
+        //{
+        //    var loginPage = new LoginPage(_browser);
+        //    loginPage.LoginToApplication();
+        //    _browser.WaitForAngular();
+        //    _browser.Navigate().GoToUrl(Url + "/dashboard");
+        //}
 
-            _browser.Navigate().GoToUrl(Url + "/dashboard");
-        }
-
-        public void WaitForElement(string selector)
+        public void WaitForElementID(string selector)
         {
             WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(15));
             IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id(selector)));
         }
 
-        [TearDown]
-        public void Fisnish()
+        public void WaitForElementCSS(string selector)
         {
-            _browser.Close();
-            _driver.Quit();
+            WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(15));
+            IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(selector)));
         }
+
+        public void WaitForElementXpath(string selector)
+        {
+            WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(15));
+            IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(selector)));
+        }
+
+
+
+        //[TearDown]
+        //public void RunAfterAllTestsCloseBrowser()
+        //{
+        //    _browser.Close();
+        //    _driver.Quit();
+        //}
     }
 }
