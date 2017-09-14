@@ -36,14 +36,19 @@ namespace ToolsQA.TestsCases
         //    }
         //}
 
-        //[SetUp]
-        //public void RunBeforeAllTestLigin()
-        //{
-        //    var loginPage = new LoginPage(_browser);
-        //    loginPage.LoginToApplication();
-        //    _browser.WaitForAngular();
-        //    _browser.Navigate().GoToUrl(Url + "/dashboard");
-        //}
+        [OneTimeSetUp]
+        public void RunBeforeAllTestLigin()
+        {
+            var loginPage = new LoginPage(_browser);
+            loginPage.LoginToApplication();
+            _browser.WaitForAngular();
+            _browser.Navigate().GoToUrl(Url + "/dashboard");
+        }
+        public void OpenDeashbordPage()
+        {
+        var dashboard = new DashboardPage(_browser);
+        }
+
 
         public void WaitForElementID(string selector)
         {
@@ -65,11 +70,11 @@ namespace ToolsQA.TestsCases
 
 
 
-        //[TearDown]
-        //public void RunAfterAllTestsCloseBrowser()
-        //{
-        //    _browser.Close();
-        //    _driver.Quit();
-        //}
+        [OneTimeTearDown]
+        public void RunAfterAllTestsCloseBrowser()
+        {
+            _browser.Close();
+            _driver.Quit();
+        }
     }
 }

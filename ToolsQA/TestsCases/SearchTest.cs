@@ -11,16 +11,7 @@ namespace ToolsQA.TestsCases
         public SearchTest() : base() { }
 
 
-        [SetUp]
-        public void RunBeforeAllTestLigin()
-        {
-            var loginPage = new LoginPage(_browser);
-            loginPage.LoginToApplication();
-            _browser.WaitForAngular();
-            _browser.Navigate().GoToUrl(Url + "/dashboard");
-        }
-
-
+      
         [Test]
         public void SimpleSearchMustBeSuccess()
         {
@@ -66,11 +57,6 @@ namespace ToolsQA.TestsCases
             Assert.AreEqual(false, _browser.FindElement(By.CssSelector(".header-main-filter")).Displayed);
         }
 
-        [TearDown]
-        public void RunAfterAllTestsCloseBrowser()
-        {
-            _browser.Close();
-            _driver.Quit();
-        }
+       
     }
 }
