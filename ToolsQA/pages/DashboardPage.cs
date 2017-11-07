@@ -30,7 +30,7 @@ namespace ToolsQA.pages
             PageFactory.InitElements(driver, this);
         }
 
-        public void LoadMoreAnalogsClick()
+        public void LoadMoreAnalog()
         {
             LoadMoreAnalogs.Click();
         }

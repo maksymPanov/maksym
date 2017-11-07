@@ -36,32 +36,35 @@ namespace ToolsQA.TestsCases
         {
             dashboard.EnableSearch("6900260289");
             WaitForElementID("addBasket");
-            dashboard.LoadMoreAnalogsClick();
+            dashboard.LoadMoreAnalog();
             var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;
             double number = 0;
 
             Assert.DoesNotThrow(() => number = double.Parse(priceText.Replace(".", ",")));
             Assert.Greater(number, 0);
+            
         }
-        [Test]
-        public void OpenAdvancedSearchMustBeSuccess()
-        {
-            dashboard.OpenAdvancedSearch();
-            WaitForElementCSS(".header-main-filter");
+        //[Test]
+        //public void OpenAdvancedSearchMustBeSuccess()
+        //{
+        //    dashboard.OpenAdvancedSearch();
+        //    WaitForElementCSS(".header-main-filter");
 
-            Assert.AreEqual(true, _browser.FindElement(By.CssSelector(".header-main-filter")).Displayed);
-        }
+        //    Assert.AreEqual(true, _browser.FindElement(By.CssSelector("header-advanced-search button-apply")).Displayed);
 
-        [Test]
-        public void CloseAdvancedSearchMustBeSuccess()
-        {
-            var dashboard = new DashboardPage(_browser);
-            dashboard.OpenAdvancedSearch();
-            WaitForElementCSS(".header-main-filter");
-            dashboard.OpenAdvancedSearch();
-            Assert.AreEqual(false, _browser.FindElement(By.CssSelector(".header-main-filter")).Displayed);
-        }
+        //}
 
+        //[Test]
+        //public void CloseAdvancedSearchMustBeSuccess()
+        //{
+        //    var dashboard = new DashboardPage(_browser);
+        //    dashboard.OpenAdvancedSearch();
+        //    WaitForElementCSS(".header-main-filter");
+        //    dashboard.OpenAdvancedSearch();
+        //    Assert.AreEqual(false, _browser.FindElement(By.CssSelector(".header-main-filter")).Displayed);
+        //}
+
+              
 
     }
 }
