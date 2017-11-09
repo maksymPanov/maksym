@@ -44,27 +44,6 @@ namespace ToolsQA.TestsCases
             Assert.Greater(number, 0);
             
         }
-        //[Test]
-        //public void OpenAdvancedSearchMustBeSuccess()
-        //{
-        //    dashboard.OpenAdvancedSearch();
-        //    WaitForElementCSS(".header-main-filter");
-
-        //    Assert.AreEqual(true, _browser.FindElement(By.CssSelector("header-advanced-search button-apply")).Displayed);
-
-        //}
-
-        //[Test]
-        //public void CloseAdvancedSearchMustBeSuccess()
-        //{
-        //    var dashboard = new DashboardPage(_browser);
-        //    dashboard.OpenAdvancedSearch();
-        //    WaitForElementCSS(".header-main-filter");
-        //    dashboard.OpenAdvancedSearch();
-        //    Assert.AreEqual(false, _browser.FindElement(By.CssSelector(".header-main-filter")).Displayed);
-        //}
-
-              
-
+        
     }
 }

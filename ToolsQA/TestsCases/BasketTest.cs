@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using OpenQA.Selenium;
 using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
@@ -12,14 +11,14 @@ namespace ToolsQA.TestsCases
         public CreateNewInvoice() : base()
         {
             basketpage = new BasketPage(_browser);
-            
+
         }
 
         [OneTimeSetUp]
         public void LoadBasket()
         {
-_browser.WaitForAngular();
-            _browser.Navigate().GoToUrl("http://shop-mvc.omega-auto.biz/#/app/basket");
+            _browser.WaitForAngular();
+            _browser.Navigate().GoToUrl(Url + "app/basket");
         }
 
         [Test]
@@ -28,7 +27,7 @@ _browser.WaitForAngular();
             //basketpage.OpenBasket();
             WaitForElementID("buttonBasketCreateInvoice");
             basketpage.InputBasketAddPosition("oc90");
-            
+
             //var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;
             //double number = 0;
 

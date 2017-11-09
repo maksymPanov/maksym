@@ -20,21 +20,9 @@ namespace ToolsQA.TestsCases
             _driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(60);
             _browser = new NgWebDriver(_driver);
             _browser.Manage().Window.Maximize();
-            Url += "/login";
-            _browser.Url = Url;
-        }
 
-        //public void WaitUntilAnalogsLoaded()
-        //{
-        //    WebDriverWait wait = new WebDriverWait(_driver, new System.TimeSpan(0, 60, 0));
-        //    IJavaScriptExecutor jsExec = (IJavaScriptExecutor)_driver;
-        //    var angularReadyScript = "!!angular.element(document).injector().get('$http').pendingRequests.find(t=>t.url.includes('search/getanalogs'))";
-        //    var angularReady = bool.Parse(jsExec.ExecuteScript(angularReadyScript).ToString());
-        //    if (!angularReady)
-        //    {
-        //        wait.Until<bool>(driver => bool.Parse(((IJavaScriptExecutor)driver).ExecuteScript(angularReadyScript).ToString()));
-        //    }
-        //}
+            _browser.Url = Url + "/login";
+        }
 
         [OneTimeSetUp]
         public void RunBeforeAllTestLigin()
@@ -42,13 +30,12 @@ namespace ToolsQA.TestsCases
             var loginPage = new LoginPage(_browser);
             loginPage.LoginToApplication();
             _browser.WaitForAngular();
-            _browser.Navigate().GoToUrl(Url + "/dashboard");
-        }
-        public void OpenDeashbordPage()
-        {
-        var dashboard = new DashboardPage(_browser);
         }
 
+        public void OpenDeashbordPage()
+        {
+            var dashboard = new DashboardPage(_browser);
+        }
 
         public void WaitForElementID(string selector)
         {
@@ -67,8 +54,6 @@ namespace ToolsQA.TestsCases
             WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(15));
             IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(selector)));
         }
-
-
 
         [OneTimeTearDown]
         public void RunAfterAllTestsCloseBrowser()
