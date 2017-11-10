@@ -1,4 +1,6 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium;
+using System.Collections.Generic;
 using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
@@ -7,10 +9,10 @@ namespace ToolsQA.TestsCases
     [TestFixture]
     class CreateNewInvoice : BaseTest
     {
-        private readonly BasketPage basketpage;
+        private BasketPage basketpage;
         public CreateNewInvoice() : base()
         {
-            basketpage = new BasketPage(_browser);
+
 
         }
 
@@ -19,20 +21,30 @@ namespace ToolsQA.TestsCases
         {
             _browser.WaitForAngular();
             _browser.Navigate().GoToUrl(Url + "app/basket");
+            basketpage = new BasketPage(_browser);
         }
 
         [Test]
         public void AddCardToBasket()
         {
-            //basketpage.OpenBasket();
             WaitForElementID("buttonBasketCreateInvoice");
             basketpage.InputBasketAddPosition("oc90");
+            _browser.WaitForAngular();
 
-            //var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;
-            //double number = 0;
+            var listRows = basketpage.BasketTable.FindElements(By.TagName("tr"));
+            var listItems = new List<string>();
 
-            //Assert. (() => number = double.Parse(priceText.Replace(".", ",")));
-            //Assert.Greater(number, 0);
+            for (var i = 1; i < listRows.Count; i++)
+            {
+                var rowItem = basketpage.BasketTable.FindElement(By.XPath($".//tbody/tr[{i}]/td[3]"));
+                if (rowItem != null && rowItem.Text != "")
+                {
+                    listItems.Add(rowItem.Text);
+                }
+            }
+
+            Assert.Greater(listItems.Count, 0);
+            Assert.Contains("OC90", listItems);
         }
 
         //[Test]

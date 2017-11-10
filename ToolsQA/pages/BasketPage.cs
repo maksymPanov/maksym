@@ -20,9 +20,13 @@ namespace ToolsQA.pages
         [CacheLookup]
         private IWebElement ButtonSaveInvoice { get; set; }
 
-        [FindsBy(How = How.Id, Using = "tableBasket")]
+        [FindsBy(How = How.Id, Using = "tblBasket")]
         [CacheLookup]
-        private IWebElement BasketTable { get; set; }
+        public IWebElement BasketTable { get; set; }
+
+        [FindsBy(How = How.Id, Using = "buttonBasketGo")]
+        [CacheLookup]
+        public IWebElement GoButton { get; set; }
 
         public BasketPage(IWebDriver driver)
         {
@@ -30,7 +34,7 @@ namespace ToolsQA.pages
             PageFactory.InitElements(driver, this);
 
         }
-        
+
 
         public void OpenBasket()
         {
@@ -38,11 +42,10 @@ namespace ToolsQA.pages
         }
 
         public void InputBasketAddPosition(string text)
-        {            
+        {
             InputBasketAddCard.SendKeys(text);
-            InputBasketAddCard.Click();
+            GoButton.Click();
         }
-
 
     }
 }
