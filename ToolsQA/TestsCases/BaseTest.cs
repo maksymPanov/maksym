@@ -39,19 +39,19 @@ namespace ToolsQA.TestsCases
 
         public void WaitForElementID(string selector)
         {
-            WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(15));
+            WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(30));
             IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id(selector)));
         }
 
         public void WaitForElementCSS(string selector)
         {
-            WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(15));
+            WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(30));
             IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(selector)));
         }
 
         public void WaitForElementXpath(string selector)
         {
-            WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(15));
+            WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(30));
             IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(selector)));
         }
 

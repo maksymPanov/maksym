@@ -7,14 +7,15 @@ namespace ToolsQA.TestsCases
 
 {
     [TestFixture]
-    class CreateNewInvoice : BaseTest
+    class BasketTests : BaseTest
     {
         private BasketPage basketpage;
-        public CreateNewInvoice() : base()
+        public BasketTests() : base()
         {
 
 
         }
+               
 
         [OneTimeSetUp]
         public void LoadBasket()
@@ -22,6 +23,16 @@ namespace ToolsQA.TestsCases
             _browser.WaitForAngular();
             _browser.Navigate().GoToUrl(Url + "app/basket");
             basketpage = new BasketPage(_browser);
+        }
+
+        [SetUp]
+
+        public void ClearInvoiceTbl()
+        {
+            _browser.WaitForAngular();
+            WaitForElementID("buttonBasketRemoveInvoice");
+            basketpage.RemoveInvoiceFromBasket();
+            basketpage.DeleteInvoiceSendYes();
         }
 
         [Test]
@@ -47,23 +58,37 @@ namespace ToolsQA.TestsCases
             Assert.Contains("OC90", listItems);
         }
 
+
         //[Test]
         //public void SaveInvoice()
         //{
-        //    basketpage.OpenBasket();
         //    WaitForElementID("buttonBasketCreateInvoice");
         //    basketpage.InputBasketAddPosition("oc90");
+        //    _browser.WaitForAngular();
+        //    basketpage.SaveInvoice();
+
+        //    var InvoiceList = basketpage.BasketTable.FindElements(By.TagName("tr"));
+        //    var listItems = new List<string>();
+
+        //    for (var i = 1; i < listRows.Count; i++)
+        //    {
+        //        var rowItem = basketpage.BasketTable.FindElement(By.XPath($".//tbody/tr[{i}]/td[3]"));
+        //        if (rowItem != null && rowItem.Text != "")
+        //        {
+        //            listItems.Add(rowItem.Text);
+        //        }
+        //    }
+
+        //    Assert.Greater(listItems.Count, 0);
+        //    Assert.Contains("OC90", listItems);
+                        
         //}
 
-
-        //[Test]
-        //public void ReservedInvoice()
+        //[TearDown]
+        //public void ClearCart()
         //{
-        //    basketpage.OpenBasket();
-        //    WaitForElementID("buttonBasketCreateInvoice");
-        //    basketpage.InputBasketAddPosition("oc90");
+        //    basketpage.ClearCart();
         //}
-
 
     }
 }
