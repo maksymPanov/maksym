@@ -26,6 +26,10 @@ namespace ToolsQA.pages
 
         [FindsBy(How = How.Id, Using = "accordionInvoiceList")]
         [CacheLookup]
+        public IWebElement InvoiceTable { get; set; }
+
+        [FindsBy(How = How.Id, Using = "accordionInvoiceList")]
+        [CacheLookup]
         public IWebElement TblInvoice { get; set; }
 
         [FindsBy(How = How.Id, Using = "buttonBasketGo")]

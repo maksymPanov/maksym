@@ -32,7 +32,7 @@ namespace ToolsQA.TestsCases
             _browser.WaitForAngular();
             WaitForElementID("buttonBasketRemoveInvoice");
             basketpage.RemoveInvoiceFromBasket();
-            basketpage.DeleteInvoiceSendYes();
+                        
         }
 
         [Test]
