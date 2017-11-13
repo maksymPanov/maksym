@@ -3,7 +3,7 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace ToolsQA.pages
 {
-    class BasketPage
+    public class BasketPage
     {
         private IWebDriver _driver;
 

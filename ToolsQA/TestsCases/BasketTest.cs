@@ -15,7 +15,7 @@ namespace ToolsQA.TestsCases
 
 
         }
-               
+
 
         [OneTimeSetUp]
         public void LoadBasket()
@@ -31,8 +31,14 @@ namespace ToolsQA.TestsCases
         {
             _browser.WaitForAngular();
             WaitForElementID("buttonBasketRemoveInvoice");
-            basketpage.RemoveInvoiceFromBasket();
-                        
+            //basketpage.RemoveInvoiceFromBasket();
+            //var listInvoice = basketpage.RemoveInvoiceFromBasket();
+            var buts = _browser.FindElements(By.Id("buttonBasketRemoveInvoice"));
+            for (var i = 0; i < buts.Count; i++)
+            {
+                buts[i].Click();
+                basketpage.DeleteInvoiceSendYes();
+            }
         }
 
         [Test]
@@ -81,7 +87,7 @@ namespace ToolsQA.TestsCases
 
         //    Assert.Greater(listItems.Count, 0);
         //    Assert.Contains("OC90", listItems);
-                        
+
         //}
 
         //[TearDown]

@@ -20,15 +20,16 @@ namespace ToolsQA.TestsCases
             _driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(60);
             _browser = new NgWebDriver(_driver);
             _browser.Manage().Window.Maximize();
-
             _browser.Url = Url + "/login";
         }
 
         [OneTimeSetUp]
-        public void RunBeforeAllTestLigin()
+        public void RunBeforeAllTestLogin()
         {
             var loginPage = new LoginPage(_browser);
+            WaitForElementID("loginInputEmail");
             loginPage.LoginToApplication();
+            
             _browser.WaitForAngular();
         }
 

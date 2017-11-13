@@ -3,7 +3,7 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace ToolsQA.pages
 {
-    class DashboardPage
+    public class DashboardPage
     {
         private IWebDriver _driver;
 
