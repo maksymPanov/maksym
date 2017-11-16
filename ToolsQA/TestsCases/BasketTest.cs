@@ -10,11 +10,7 @@ namespace ToolsQA.TestsCases
     class BasketTests : BaseTest
     {
         private BasketPage basketpage;
-        //public BasketTests() : base()
-        //{
-
-
-        //}
+        
 
 
         [OneTimeSetUp]

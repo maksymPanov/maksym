@@ -22,6 +22,11 @@ namespace ToolsQA.pages
         [FindsBy(How = How.Id, Using = "navbarIconFilter")]
         [CacheLookup]
         private IWebElement AdvancedSearch { get; set; }
+            
+
+
+
+
 
 
         public DashboardPage(IWebDriver driver)
@@ -39,7 +44,8 @@ namespace ToolsQA.pages
         {
             AdvancedSearch.Click();
         }
-
+              
+    
         public void Clear()
         {
             _driver.Navigate().Refresh();
