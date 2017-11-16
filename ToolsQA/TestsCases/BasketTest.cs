@@ -10,11 +10,11 @@ namespace ToolsQA.TestsCases
     class BasketTests : BaseTest
     {
         private BasketPage basketpage;
-        public BasketTests() : base()
-        {
+        //public BasketTests() : base()
+        //{
 
 
-        }
+        //}
 
 
         [OneTimeSetUp]
@@ -30,7 +30,7 @@ namespace ToolsQA.TestsCases
         public void ClearInvoiceTbl()
         {
             _browser.WaitForAngular();
-            WaitForElementID("buttonBasketRemoveInvoice");
+            WaitForElementID("buttonBasketCreateInvoice");
             //basketpage.RemoveInvoiceFromBasket();
             //var listInvoice = basketpage.RemoveInvoiceFromBasket();
             var buts = _browser.FindElements(By.Id("buttonBasketRemoveInvoice"));
@@ -65,36 +65,19 @@ namespace ToolsQA.TestsCases
         }
 
 
-        //[Test]
-        //public void SaveInvoice()
-        //{
-        //    WaitForElementID("buttonBasketCreateInvoice");
-        //    basketpage.InputBasketAddPosition("oc90");
-        //    _browser.WaitForAngular();
-        //    basketpage.SaveInvoice();
+        [Test]
+        public void SaveInvoice()
+        {
+            WaitForElementID("buttonBasketCreateInvoice");
+            basketpage.InputBasketAddPosition("oc90");
+            _browser.WaitForAngular();
+            basketpage.SaveInvoice();
+            WaitForElementID("buttonBasketSaveInvoice");
+            var t = _driver.FindElement(By.Id("buttonBasketSaveInvoice"));
+            Assert.IsTrue(t.Displayed);
 
-        //    var InvoiceList = basketpage.BasketTable.FindElements(By.TagName("tr"));
-        //    var listItems = new List<string>();
+        }
 
-        //    for (var i = 1; i < listRows.Count; i++)
-        //    {
-        //        var rowItem = basketpage.BasketTable.FindElement(By.XPath($".//tbody/tr[{i}]/td[3]"));
-        //        if (rowItem != null && rowItem.Text != "")
-        //        {
-        //            listItems.Add(rowItem.Text);
-        //        }
-        //    }
-
-        //    Assert.Greater(listItems.Count, 0);
-        //    Assert.Contains("OC90", listItems);
-
-        //}
-
-        //[TearDown]
-        //public void ClearCart()
-        //{
-        //    basketpage.ClearCart();
-        //}
 
     }
 }
