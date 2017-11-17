@@ -148,6 +148,14 @@ namespace ToolsQA.TestsCases
         //    var SearchResultTires = _browser.FindElement(By.LinkText("1017412"));
         //    Assert.IsTrue(SearchResultTires.Displayed);
 
+
+        //    var restsText = _browser.FindElement(By.CssSelector(".hidden-sm.hidden-xs")).Text;
+
+        //    if (restsText.Trim().Contains("-"))
+        //    {
+        //        Assert.Fail();
+        //    }
+
         //}
 
 

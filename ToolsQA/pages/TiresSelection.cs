@@ -67,23 +67,29 @@ namespace ToolsQA.pages
         private IWebElement ClickChatbar { get; set; }
 
 
-       
+
+        public void OpenSelectionTires()
+        {
+            ButtonCategoryTires.Click();
+        }
 
         public void ChatbarHide()
         {
             ClickChatbar.Click();
-        }
-                      
-
-        public void OpenDiametrDdl()
-        {
-            ButtonAsideTiresDiametr.Click();
         }
 
         public void ClickOnButtonApplyInAdvancedSearch()
         {
             ButtonEnterAdvancedSearch.Click();
         }
+
+
+        public void OpenDiametrDdl()
+        {
+            ButtonAsideTiresDiametr.Click();
+        }
+
+       
 
         public void OpenSizeDdl()
         {
@@ -118,10 +124,7 @@ namespace ToolsQA.pages
             ParamertAsideTiresAppointment.Click();
         }
 
-        public void OpenSelectionTires()
-        {
-            ButtonCategoryTires.Click();
-        }
+        
 
 
         public void ChooseAllAppointment()

@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="pages\BasketPage.cs" />
+    <Compile Include="pages\BodyAndOpticSelection.cs" />
     <Compile Include="pages\TiresSelection.cs" />
     <Compile Include="pages\DashboardPage.cs" />
     <Compile Include="pages\LoginPage.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestsCases\BaseTest.cs" />
     <Compile Include="TestsCases\BasketTest.cs" />
+    <Compile Include="TestsCases\SelectionBodyAndOptic.cs" />
     <Compile Include="TestsCases\SelectionTiresTest.cs" />
     <Compile Include="TestsCases\LoginTest.cs" />
     <Compile Include="TestsCases\SearchTest.cs" />
