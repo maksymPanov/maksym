@@ -34,7 +34,7 @@ namespace ToolsQA.pages
         [CacheLookup]
         private IWebElement ButtonAsideTiresUsage { get; set; }
 
-        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'15')]")]  //*[@class='asideTiresDiametr']//*[text()='15']
+        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'15')]")]  
         [CacheLookup]
         private IWebElement ParametrAsideTiresDiametr { get; set; }
         
@@ -42,13 +42,21 @@ namespace ToolsQA.pages
         [CacheLookup]
         private IWebElement ParametrAsideTiresFrameSize { get; set; }
 
-        [FindsBy(How = How.XPath, Using = ".//*[@class='asideTiresSeason']//*[text()='']")]
+        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'Зима')]")]
         [CacheLookup]
         private IWebElement ParamertAsideTiresSeason { get; set; }
 
-        [FindsBy(How = How.XPath, Using = ".//*[@class='asideTiresUsage']//*[text()='']")]
+        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'Легковая')]")]
         [CacheLookup]
-        private IWebElement ParamertAsideTiresUsage { get; set; }
+        private IWebElement ParamertAsideTiresAppointment { get; set; }
+
+        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'20')]")]
+        [CacheLookup]
+        private IWebElement ParametrAsideTiresAllDiametr { get; set; }
+
+        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'Внедорожники')]")]
+        [CacheLookup]
+        private IWebElement ParamertAsideTiresAllAppointment { get; set; }
 
         [FindsBy(How = How.Id, Using = "advancedsearchcategory")]
         [CacheLookup]
@@ -58,6 +66,8 @@ namespace ToolsQA.pages
         [CacheLookup]
         private IWebElement ClickChatbar { get; set; }
 
+
+       
 
         public void ChatbarHide()
         {
@@ -84,7 +94,7 @@ namespace ToolsQA.pages
         {
             ButtonAsideTiresSeason.Click();
         }
-        public void OpenUsageDdl()
+        public void OpenAppointmentDdl()
         {
             ButtonAsideTiresUsage.Click();
         }
@@ -99,18 +109,29 @@ namespace ToolsQA.pages
             ParametrAsideTiresFrameSize.Click();
         }
 
-        //public void ChooseSeason()
-        //{
-        //    ParamertAsideTiresSeason.Click();
-        //}
-        //public void ChooseUsage()
-        //{
-        //    ParametrAsideTiresUsage.Click();
-        //}
+        public void ChooseSeason()
+        {
+            ParamertAsideTiresSeason.Click();
+        }
+        public void ChooseAppointment()
+        {
+            ParamertAsideTiresAppointment.Click();
+        }
 
         public void OpenSelectionTires()
         {
             ButtonCategoryTires.Click();
+        }
+
+
+        public void ChooseAllAppointment()
+        {
+            ParamertAsideTiresAllAppointment.Click();
+        }
+
+        public void ChooseDiametrAll()
+        {
+            ParametrAsideTiresAllDiametr.Click();
         }
 
 

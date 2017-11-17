@@ -29,10 +29,10 @@ namespace ToolsQA.TestsCases
             WaitForElementID("buttonBasketCreateInvoice");
             //basketpage.RemoveInvoiceFromBasket();
             //var listInvoice = basketpage.RemoveInvoiceFromBasket();
-            var buts = _browser.FindElements(By.Id("buttonBasketRemoveInvoice"));
-            for (var i = 0; i < buts.Count; i++)
+            var removeInvoice = _browser.FindElements(By.Id("buttonBasketRemoveInvoice"));
+            for (var i = 0; i < removeInvoice.Count; i++)
             {
-                buts[i].Click();
+                removeInvoice[i].Click();
                 basketpage.DeleteInvoiceSendYes();
             }
         }
