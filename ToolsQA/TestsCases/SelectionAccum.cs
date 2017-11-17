@@ -18,9 +18,9 @@ namespace ToolsQA.TestsCases
         [OneTimeSetUp]
         public void HideAdvancedSearch()
         {
-            WaitForElementID("sidebarCategoryTires");
-            tiresSelection.OpenSelectionTires();
-            tiresSelection.ChatbarHide();
+            WaitForElementID("sidebarCategoryAccum");
+            accumSelection.OpenSelectionAccum();
+            accumSelection.ChatbarHide();
         }
 
         [TearDown]
@@ -34,3 +34,35 @@ namespace ToolsQA.TestsCases
             }
 
         }
+        [Test]
+
+        public void AccumVoltageSearchResultMustBeSuccess()
+        {
+
+            WaitForElementXpath(".//*[@id='menu']/li[2]/span");
+
+            accumSelection.OpenAccumVoltageDdl();
+            accumSelection.ChooseVoltage();
+            accumSelection.ClickOnButtonApplyInAdvancedSearch();
+
+            var SearchResultTires = _browser.FindElement(By.LinkText("5237994734"));
+            Assert.IsTrue(SearchResultTires.Displayed);
+
+        }
+        [Test]
+
+        public void AccumCapacitySearchResultMustBeSuccess()
+        {
+
+            WaitForElementXpath(".//*[@id='menu']/li[2]/span");
+
+            accumSelection.OpenAccumCapacityDdl();
+            accumSelection.ChooseCapasity();
+            accumSelection.ClickOnButtonApplyInAdvancedSearch();
+
+            var SearchResultTires = _browser.FindElement(By.LinkText("EB5L-B"));
+            Assert.IsTrue(SearchResultTires.Displayed);
+
+        }
+    }
+}

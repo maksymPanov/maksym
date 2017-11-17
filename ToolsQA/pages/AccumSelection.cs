@@ -24,6 +24,21 @@ namespace ToolsQA.pages
         [CacheLookup]
         private IWebElement ClickChatbar { get; set; }
 
+        [FindsBy(How = How.Id, Using = "asideAccumSelectedVoltage")]
+        [CacheLookup]
+        private IWebElement ButtonAccumVoltage { get; set; }
+
+        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'6 В')]")]
+        [CacheLookup]
+        private IWebElement ParametrAsideChooseVoltage { get; set; }
+
+        [FindsBy(How = How.Id, Using = "asideAccumSelectedCapacity")]
+        [CacheLookup]
+        private IWebElement ButtonAccumCapacity { get; set; }
+
+        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'5 А/ч')]")]
+        [CacheLookup]
+        private IWebElement ParametrAsideChooseCapacity { get; set; }
 
         public void OpenSelectionAccum()
         {
@@ -39,6 +54,22 @@ namespace ToolsQA.pages
         {
             ClickChatbar.Click();
         }
-       
+        public void OpenAccumVoltageDdl()
+        {
+            ButtonAccumVoltage.Click();
         }
+    
+        public void ChooseVoltage()
+        {
+            ParametrAsideChooseVoltage.Click();
+        }
+        public void OpenAccumCapacityDdl()
+        {
+            ButtonAccumCapacity.Click();
+        }
+        public void ChooseCapasity()
+        {
+            ParametrAsideChooseCapacity.Click();
+        }
+    }
 }
