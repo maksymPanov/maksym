@@ -69,8 +69,21 @@ namespace ToolsQA.TestsCases
             _browser.WaitForAngular();
             basketpage.SaveInvoice();
             WaitForElementID("buttonBasketSaveInvoice");
-            var t = _driver.FindElement(By.Id("buttonBasketSaveInvoice"));
-            Assert.IsTrue(t.Displayed);
+            var save = _driver.FindElement(By.Id("buttonBasketSaveInvoice"));
+            Assert.IsTrue(save.Displayed);
+
+        }
+
+        [Test]
+        public void ReservationInvoice()
+        {
+            WaitForElementID("buttonBasketCreateInvoice");
+            basketpage.InputBasketAddPosition("oc90");
+            _browser.WaitForAngular();
+            basketpage.ReservationInvoice();
+            WaitForElementID("buttonBasketReadyInvoice");
+            var reservation = _driver.FindElement(By.Id("buttonBasketReadyInvoice"));
+            Assert.IsTrue(reservation.Displayed);
 
         }
 

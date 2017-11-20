@@ -20,6 +20,11 @@ namespace ToolsQA.pages
         [CacheLookup]
         private IWebElement ButtonSaveInvoice { get; set; }
 
+        [FindsBy(How = How.Id, Using = "buttonBasketReservationInvoice")]
+        [CacheLookup]
+        private IWebElement ButtonReservationInvoice { get; set; }
+
+        
         [FindsBy(How = How.Id, Using = "tblBasket")]
         [CacheLookup]
         public IWebElement BasketTable { get; set; }
@@ -54,6 +59,10 @@ namespace ToolsQA.pages
         public void SaveInvoice()
         {
             ButtonSaveInvoice.Click();
+        }
+        public void ReservationInvoice()
+        {
+            ButtonReservationInvoice.Click();
         }
 
         public void OpenBasket()
