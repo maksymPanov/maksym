@@ -10,7 +10,7 @@ namespace ToolsQA.TestsCases
     class BasketTests : BaseTest
     {
         private BasketPage basketpage;
-        
+
 
 
         [OneTimeSetUp]
@@ -68,10 +68,9 @@ namespace ToolsQA.TestsCases
             basketpage.InputBasketAddPosition("oc90");
             _browser.WaitForAngular();
             basketpage.SaveInvoice();
-            WaitForElementID("buttonBasketSaveInvoice");
-            var save = _driver.FindElement(By.Id("buttonBasketSaveInvoice"));
-            Assert.IsTrue(save.Displayed);
-
+            WaitForElementID("openHeaderInvoice");
+            var invoiceStatus = _driver.FindElement(By.XPath(".//*[@id='openHeaderInvoice']/table/tbody/tr/td[2]"));
+            Assert.True(invoiceStatus.Text.Contains("Сохранён"));
         }
 
         [Test]
@@ -81,7 +80,7 @@ namespace ToolsQA.TestsCases
             basketpage.InputBasketAddPosition("oc90");
             _browser.WaitForAngular();
             basketpage.ReservationInvoice();
-            WaitForElementID("buttonBasketReadyInvoice");
+            WaitForElementID("openHeaderInvoice");
             var reservation = _driver.FindElement(By.Id("buttonBasketReadyInvoice"));
             Assert.IsTrue(reservation.Displayed);
 
