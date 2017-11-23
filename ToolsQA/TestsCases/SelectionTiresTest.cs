@@ -38,17 +38,11 @@ namespace ToolsQA.TestsCases
         [Test]
         public void TiresSearchDiametrResultMustBeSuccess()
         {
-            //tiresSelection.OpenSelectionTires();
-            WaitForElementXpath(".//*[@id='menu']/li[2]/span");
-            //var SearchResultTires = _browser.FindElement(By.XPath(".//*[@id='menu']/li[2]/span"));
-            //Assert.IsTrue(SearchResultTires.Displayed);
+      
+            WaitForElementXpath(".//*[@id='menu']/li[2]/span");            
             tiresSelection.OpenDiametrDdl();
             tiresSelection.ChooseDiametr();
-            //tiresSelection.OpenDiametrDdl();
-            //tiresSelection.ChatbarHide();
-
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
-
             var SearchResultTires = _browser.FindElement(By.LinkText("TS00107"));
             Assert.IsTrue(SearchResultTires.Displayed);
 
@@ -60,11 +54,9 @@ namespace ToolsQA.TestsCases
         {
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
-
             tiresSelection.OpenSizeDdl();
             tiresSelection.ChooseSize();
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
-
             var SearchResultTires = _browser.FindElement(By.LinkText("1017412"));
             Assert.IsTrue(SearchResultTires.Displayed);
 
@@ -78,7 +70,6 @@ namespace ToolsQA.TestsCases
             tiresSelection.OpenSeasonDdl();
             tiresSelection.ChooseSeason();
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
-
             var SearchResultTires = _browser.FindElement(By.LinkText("TW00154"));
             Assert.IsTrue(SearchResultTires.Displayed);
 
@@ -92,7 +83,6 @@ namespace ToolsQA.TestsCases
             tiresSelection.OpenAppointmentDdl();
             tiresSelection.ChooseAppointment();
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
-
             var SearchResultTires = _browser.FindElement(By.LinkText("TS01153"));
             Assert.IsTrue(SearchResultTires.Displayed);
 
@@ -102,10 +92,8 @@ namespace ToolsQA.TestsCases
         public void TiresMustHavePrices()
         {
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
-
             var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;
             double number = 0;
-
             Assert.DoesNotThrow(() => number = double.Parse(priceText.Replace(".", ",")));
             Assert.Greater(number, 0);
 
@@ -115,9 +103,7 @@ namespace ToolsQA.TestsCases
         public void TiresMustHaveRests()
         {
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
-
-            var restsText = _browser.FindElement(By.CssSelector(".hidden-sm.hidden-xs")).Text;
-            
+            var restsText = _browser.FindElement(By.CssSelector(".hidden-sm.hidden-xs")).Text;            
             if (restsText.Trim().Contains("-"))
             {
                 Assert.Fail();

@@ -47,43 +47,36 @@ namespace ToolsQA.TestsCases
 
             var SearchResultTires = _browser.FindElement(By.LinkText("5237994734"));
             Assert.IsTrue(SearchResultTires.Displayed);
-
         }
+
         [Test]
 
         public void AccumCapacitySearchResultMustBeSuccess()
         {
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
-
             accumSelection.OpenAccumCapacityDdl();
             accumSelection.ChooseCapasity();
             accumSelection.ClickOnButtonApplyInAdvancedSearch();
-
             var SearchResultTires = _browser.FindElement(By.LinkText("EB5L-B"));
             Assert.IsTrue(SearchResultTires.Displayed);
-
         }
+
         [Test]
         public void AccumMustHavePrices()
         {
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
-
             var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;
             double number = 0;
-
             Assert.DoesNotThrow(() => number = double.Parse(priceText.Replace(".", ",")));
             Assert.Greater(number, 0);
-
         }
 
         [Test]
         public void AccumMustHaveRests()
         {
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
-
             var restsText = _browser.FindElement(By.CssSelector(".hidden-sm.hidden-xs")).Text;
-
             if (restsText.Trim().Contains("-"))
             {
                 Assert.Fail();
