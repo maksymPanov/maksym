@@ -43,7 +43,7 @@ namespace ToolsQA.TestsCases
             tiresSelection.OpenDiametrDdl();
             tiresSelection.ChooseDiametr();
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("TS00107"));
+            var SearchResultTires = _browser.FindElement(By.LinkText("205/65R15"));
             Assert.IsTrue(SearchResultTires.Displayed);
 
         }
