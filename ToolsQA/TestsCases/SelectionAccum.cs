@@ -63,6 +63,93 @@ namespace ToolsQA.TestsCases
         }
 
         [Test]
+
+        public void AccumAmperegeSearchResultMustBeSuccess()
+        {
+
+            WaitForElementXpath(".//*[@id='menu']/li[2]/span");
+            accumSelection.OpenAccumAmperegeDdl();
+            accumSelection.ChooseAmperege();
+            accumSelection.ClickOnButtonApplyInAdvancedSearch();
+            var SearchResultTires = _browser.FindElement(By.LinkText("EB4L-B"));
+            Assert.IsTrue(SearchResultTires.Displayed);
+        }
+
+        [Test]
+
+        public void AccumLengthSearchResultMustBeSuccess()
+        {
+
+            WaitForElementXpath(".//*[@id='menu']/li[2]/span");
+            accumSelection.OpenAccumLengthDdl();
+            accumSelection.ChooseLength();
+            accumSelection.ClickOnButtonApplyInAdvancedSearch();
+            var SearchResultTires = _browser.FindElement(By.LinkText("6N11A-1B"));
+            Assert.IsTrue(SearchResultTires.Displayed);
+        }
+
+        [Test]
+
+        public void AccumSelectedSearchResultMustBeSuccess()
+        {
+
+            WaitForElementXpath(".//*[@id='menu']/li[2]/span");
+            accumSelection.OpenAccumSelectedDdl();
+            accumSelection.ChooseSelected();
+            accumSelection.ClickOnButtonApplyInAdvancedSearch();
+            var SearchResultTires = _browser.FindElement(By.LinkText("EB5L-B"));
+            Assert.IsTrue(SearchResultTires.Displayed);
+        }
+
+        [Test]
+        public void AccumHeightSearchResultMustBeSuccess()
+        {
+
+            WaitForElementXpath(".//*[@id='menu']/li[2]/span");
+            accumSelection.OpenAccumHeightDdl();
+            accumSelection.ChooseHeight();
+            accumSelection.ClickOnButtonApplyInAdvancedSearch();
+            var SearchResultTires = _browser.FindElement(By.LinkText("5237994780"));
+            Assert.IsTrue(SearchResultTires.Displayed);
+        }
+
+        [Test]
+        public void AccumPolaritySearchResultMustBeSuccess()
+        {
+
+            WaitForElementXpath(".//*[@id='menu']/li[2]/span");
+            accumSelection.OpenAccumPolarityDdl();
+            accumSelection.ChoosePolarity();
+            accumSelection.ClickOnButtonApplyInAdvancedSearch();
+            var SearchResultTires = _browser.FindElement(By.LinkText("6СТ-190 АЗ (3)"));
+            Assert.IsTrue(SearchResultTires.Displayed);
+        }
+
+        [Test]
+        public void AccumTerminalSearchResultMustBeSuccess()
+        {
+
+            WaitForElementXpath(".//*[@id='menu']/li[2]/span");
+            accumSelection.OpenAccumTerminalDdl();
+            accumSelection.ChooseTerminal();
+            accumSelection.ClickOnButtonApplyInAdvancedSearch();
+            var SearchResultTires = _browser.FindElement(By.LinkText("6СТ-190 АЗ (3)"));
+            Assert.IsTrue(SearchResultTires.Displayed);
+        }
+
+        [Test]
+        public void AccumSelected1SearchResultMustBeSuccess()
+        {
+
+            WaitForElementXpath(".//*[@id='menu']/li[2]/span");
+            accumSelection.OpenAccumSelected1Ddl();
+            accumSelection.ChooseSelected1();
+            accumSelection.ClickOnButtonApplyInAdvancedSearch();
+            var SearchResultTires = _browser.FindElement(By.LinkText("6СТ-95A1 (1)"));
+            Assert.IsTrue(SearchResultTires.Displayed);
+        }
+
+        [Test]
         public void AccumMustHavePrices()
         {
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
