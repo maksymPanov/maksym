@@ -65,6 +65,7 @@
     <Compile Include="pages\BasketPage.cs" />
     <Compile Include="pages\BodyAndOpticSelection.cs" />
     <Compile Include="pages\AccumSelection.cs" />
+    <Compile Include="pages\TechnicalFluidSelection.cs" />
     <Compile Include="pages\LampsSelection.cs" />
     <Compile Include="pages\TiresSelection.cs" />
     <Compile Include="pages\DashboardPage.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestsCases\BaseTest.cs" />
     <Compile Include="TestsCases\BasketTest.cs" />
+    <Compile Include="TestsCases\SelectionTechnicalFluid.cs" />
     <Compile Include="TestsCases\SelectionLampsTest.cs" />
     <Compile Include="TestsCases\SelectionAccum.cs" />
     <Compile Include="TestsCases\SelectionBodyAndOptic.cs" />
