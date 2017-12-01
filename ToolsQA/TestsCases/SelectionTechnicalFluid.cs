@@ -101,7 +101,7 @@ namespace ToolsQA.TestsCases
         }
 
         [Test]
-        public void TiresMustHavePrices()
+        public void TFMustHavePrices()
         {
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;
@@ -112,7 +112,7 @@ namespace ToolsQA.TestsCases
         }
 
         [Test]
-        public void TiresMustHaveRests()
+        public void TFMustHaveRests()
         {
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             var restsText = _browser.FindElement(By.CssSelector(".hidden-sm.hidden-xs")).Text;

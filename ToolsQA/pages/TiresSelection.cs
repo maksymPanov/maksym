@@ -136,8 +136,5 @@ namespace ToolsQA.pages
         {
             ParametrAsideTiresAllDiametr.Click();
         }
-
-
-
     }
 }
