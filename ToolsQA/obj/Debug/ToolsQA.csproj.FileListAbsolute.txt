@@ -1,39 +1,9 @@
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\ToolsQA.exe.config
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\ToolsQA.exe
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\ToolsQA.pdb
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\nunit.framework.dll
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\Protractor.dll
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.dll
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.Support.dll
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\nunit.framework.xml
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\Protractor.pdb
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\Protractor.xml
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.xml
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.Support.xml
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.csprojResolveAssemblyReference.cache
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.exe
-C:\Users\aleksandr.rezenkov\Documents\Visual Studio 2015\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.pdb
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\ToolsQA.exe.config
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\obj\Debug\ToolsQA.exe
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\obj\Debug\ToolsQA.pdb
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\ToolsQA.exe
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\ToolsQA.pdb
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\nunit.framework.dll
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\Protractor.dll
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\WebDriver.dll
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\WebDriver.Support.dll
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\nunit.framework.xml
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\Protractor.pdb
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\Protractor.xml
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\WebDriver.xml
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\bin\Debug\WebDriver.Support.xml
-C:\Users\maksim.panov\Documents\omega.autotest\ToolsQA\obj\Debug\ToolsQA.csprojResolveAssemblyReference.cache
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\ToolsQA.exe.config
-E:\Rezenkov\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.exe
-E:\Rezenkov\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.pdb
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\ToolsQA.exe
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\ToolsQA.pdb
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\nunit.framework.dll
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\NUnitGoCore.dll
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\NUnitGoReport.exe
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\Protractor.dll
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.dll
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.Support.dll
@@ -43,18 +13,6 @@ E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\Protractor.xml
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.xml
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.Support.xml
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.csprojResolveAssemblyReference.cache
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\ToolsQA.exe.config
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\obj\Debug\ToolsQA.exe
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\obj\Debug\ToolsQA.pdb
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\ToolsQA.exe
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\ToolsQA.pdb
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\nunit.framework.dll
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\Protractor.dll
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\WebDriver.dll
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\WebDriver.Support.dll
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\nunit.framework.xml
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\Protractor.pdb
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\Protractor.xml
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\WebDriver.xml
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\WebDriver.Support.xml
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\obj\Debug\ToolsQA.csprojResolveAssemblyReference.cache
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.exe
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.pdb
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\RelevantCodes.ExtentReports.dll

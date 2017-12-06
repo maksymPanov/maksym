@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using System.Collections.Generic;
+using RelevantCodes.ExtentReports;
 using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
@@ -41,6 +41,8 @@ namespace ToolsQA.TestsCases
 
             public void BodyAndOpticGroupSearchResultMustBeSuccess()
             {
+                test = extent.StartTest("BodyAndOpticGroupSearchResultMustBeSuccess");
+                test.Log(LogStatus.Pass, "Pass");
 
                 WaitForElementXpath(".//*[@id='menu']/li[2]/span");
 
@@ -56,6 +58,8 @@ namespace ToolsQA.TestsCases
 
             public void BodyAndOpticSideSearchResultMustBeSuccess()
             {
+                test = extent.StartTest("BodyAndOpticSideSearchResultMustBeSuccess");
+                test.Log(LogStatus.Pass, "Pass");
 
                 WaitForElementXpath(".//*[@id='menu']/li[2]/span");
 
@@ -70,6 +74,9 @@ namespace ToolsQA.TestsCases
             [Test]
             public void BodyAndOpticsMustHavePrices()
             {
+                test = extent.StartTest("BodyAndOpticsMustHavePrices");
+                test.Log(LogStatus.Pass, "Pass");
+
                 WaitForElementXpath(".//*[@id='menu']/li[2]/span");
 
                 var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;
@@ -83,6 +90,9 @@ namespace ToolsQA.TestsCases
             [Test]
             public void BodyAndOpticsMustHaveRests()
             {
+                test = extent.StartTest("BodyAndOpticsMustHaveRests");
+                test.Log(LogStatus.Pass, "Pass");
+
                 WaitForElementXpath(".//*[@id='menu']/li[2]/span");
 
                 var restsText = _browser.FindElement(By.CssSelector(".hidden-sm.hidden-xs")).Text;

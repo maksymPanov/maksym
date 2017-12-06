@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using System.Collections.Generic;
+using RelevantCodes.ExtentReports;
 using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
@@ -38,8 +38,10 @@ namespace ToolsQA.TestsCases
         [Test]
         public void TiresSearchDiametrResultMustBeSuccess()
         {
-      
-            WaitForElementXpath(".//*[@id='menu']/li[2]/span");            
+            test = extent.StartTest("TiresSearchDiametrResultMustBeSuccess");
+            test.Log(LogStatus.Pass, "Pass");
+
+            WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             tiresSelection.OpenDiametrDdl();
             tiresSelection.ChooseDiametr();
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
@@ -52,6 +54,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void TiresSearchSizeResultMustBeSuccess()
         {
+            test = extent.StartTest("TiresSearchSizeResultMustBeSuccess");
+            test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             tiresSelection.OpenSizeDdl();
@@ -65,6 +69,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void TiresSearchSeasonsresultMustBeSuccess()
         {
+            test = extent.StartTest("TiresSearchSeasonsresultMustBeSuccess");
+            test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             tiresSelection.OpenSeasonDdl();
@@ -78,6 +84,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void TiresSearchAppointmentMustBeSuccess()
         {
+            test = extent.StartTest("TiresSearchAppointmentMustBeSuccess");
+            test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             tiresSelection.OpenAppointmentDdl();
@@ -91,6 +99,9 @@ namespace ToolsQA.TestsCases
         [Test]
         public void TiresMustHavePrices()
         {
+            test = extent.StartTest("TiresMustHavePrices");
+            test.Log(LogStatus.Pass, "Pass");
+
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;
             double number = 0;
@@ -102,13 +113,16 @@ namespace ToolsQA.TestsCases
         [Test]
         public void TiresMustHaveRests()
         {
+            test = extent.StartTest("TiresMustHaveRests");
+            test.Log(LogStatus.Pass, "Pass");
+
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
-            var restsText = _browser.FindElement(By.CssSelector(".hidden-sm.hidden-xs")).Text;            
+            var restsText = _browser.FindElement(By.CssSelector(".hidden-sm.hidden-xs")).Text;
             if (restsText.Trim().Contains("-"))
             {
                 Assert.Fail();
             }
-                       
+
 
         }
 

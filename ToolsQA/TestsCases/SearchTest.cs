@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using RelevantCodes.ExtentReports;
 using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
@@ -22,6 +23,9 @@ namespace ToolsQA.TestsCases
         [Test]
         public void SimpleSearchMustBeSuccess()
         {
+            test = extent.StartTest("SearchTest");
+            test.Log(LogStatus.Pass, "Pass");
+
             dashboard.EnableSearch("4610495");
             WaitForElementID("addBasket");
             var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;
@@ -34,6 +38,9 @@ namespace ToolsQA.TestsCases
         [Test]
         public void SearchOpenAnalogs()
         {
+            test = extent.StartTest("AnalogsTest");
+            test.Log(LogStatus.Pass, "Pass");
+
             dashboard.EnableSearch("6900260289");
             WaitForElementID("addBasket");
             dashboard.LoadMoreAnalog();
@@ -42,8 +49,8 @@ namespace ToolsQA.TestsCases
 
             Assert.DoesNotThrow(() => number = double.Parse(priceText.Replace(".", ",")));
             Assert.Greater(number, 0);
-            
+
         }
-        
+
     }
 }
