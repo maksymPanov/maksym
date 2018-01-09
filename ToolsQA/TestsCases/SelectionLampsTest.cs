@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using RelevantCodes.ExtentReports;
 using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
@@ -39,8 +38,8 @@ namespace ToolsQA.TestsCases
 
         public void LampsPowerSearchResultMustBeSuccess()
         {
-            test = extent.StartTest("LampsPowerSearchResultMustBeSuccess");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("LampsPowerSearchResultMustBeSuccess");
+            //test.Log(LogStatus.Pass, "Pass");
 
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
@@ -57,8 +56,8 @@ namespace ToolsQA.TestsCases
 
         public void LampsBaseSearchResultMustBeSuccess()
         {
-            test = extent.StartTest("LampsBaseSearchResultMustBeSuccess");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("LampsBaseSearchResultMustBeSuccess");
+            //test.Log(LogStatus.Pass, "Pass");
 
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
@@ -74,8 +73,8 @@ namespace ToolsQA.TestsCases
 
         public void LampsXenonSearchResultMustBeSuccess()
         {
-            test = extent.StartTest("LampsXenonSearchResultMustBeSuccess");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("LampsXenonSearchResultMustBeSuccess");
+            //test.Log(LogStatus.Pass, "Pass");
 
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
@@ -90,8 +89,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void LampsMustHavePrices()
         {
-            test = extent.StartTest("LampsMustHavePrices");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("LampsMustHavePrices");
+            //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;
@@ -104,8 +103,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void LampsMustHaveRests()
         {
-            test = extent.StartTest("LampsMustHaveRests");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("LampsMustHaveRests");
+            //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             var restsText = _browser.FindElement(By.CssSelector(".hidden-sm.hidden-xs")).Text;

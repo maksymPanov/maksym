@@ -1,0 +1,17 @@
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\ToolsQA.exe.config
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\ToolsQA.exe
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\ToolsQA.pdb
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\nunit.framework.dll
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\NUnitGoCore.dll
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\NUnitGoReport.exe
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\Protractor.dll
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\RelevantCodes.ExtentReports.dll
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\WebDriver.dll
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\WebDriver.Support.dll
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\nunit.framework.xml
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\Protractor.pdb
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\Protractor.xml
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\WebDriver.xml
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Release\WebDriver.Support.xml
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\obj\Release\ToolsQA.exe
+E:\Rezenkov\Projects\omega.autotest\ToolsQA\obj\Release\ToolsQA.pdb

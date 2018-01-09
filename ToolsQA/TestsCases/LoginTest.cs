@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using RelevantCodes.ExtentReports;
 
 namespace ToolsQA.TestsCases
 {
@@ -12,8 +11,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void LoginMustBeSuccess()
         {
-            test = extent.StartTest("LoginTest");
-            test.Log(LogStatus.Pass, "Pass");
+            //    test = extent.StartTest("LoginTest");
+            //    test.Log(LogStatus.Pass, "Pass");
 
             Assert.IsTrue(_browser.Url.Contains("dashboard"));
         }

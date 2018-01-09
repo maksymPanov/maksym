@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using RelevantCodes.ExtentReports;
 using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
@@ -38,8 +37,8 @@ namespace ToolsQA.TestsCases
 
         public void AccumVoltageSearchResultMustBeSuccess()
         {
-            test = extent.StartTest("AccumVoltageSearchResultMustBeSuccess");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("AccumVoltageSearchResultMustBeSuccess");
+            //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
 
@@ -55,8 +54,8 @@ namespace ToolsQA.TestsCases
 
         public void AccumCapacitySearchResultMustBeSuccess()
         {
-            test = extent.StartTest("AccumCapacitySearchResultMustBeSuccess");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("AccumCapacitySearchResultMustBeSuccess");
+            //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             accumSelection.OpenAccumCapacityDdl();
@@ -70,8 +69,8 @@ namespace ToolsQA.TestsCases
 
         public void AccumAmperegeSearchResultMustBeSuccess()
         {
-            test = extent.StartTest("AccumAmperegeSearchResultMustBeSuccess");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("AccumAmperegeSearchResultMustBeSuccess");
+            //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             accumSelection.OpenAccumAmperegeDdl();
@@ -85,8 +84,8 @@ namespace ToolsQA.TestsCases
 
         public void AccumLengthSearchResultMustBeSuccess()
         {
-            test = extent.StartTest("AccumLengthSearchResultMustBeSuccess");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("AccumLengthSearchResultMustBeSuccess");
+            //test.Log(LogStatus.Pass, "Pass");
 
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
@@ -101,8 +100,8 @@ namespace ToolsQA.TestsCases
 
         public void AccumSelectedSearchResultMustBeSuccess()
         {
-            test = extent.StartTest("AccumSelectedSearchResultMustBeSuccess");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("AccumSelectedSearchResultMustBeSuccess");
+            //test.Log(LogStatus.Pass, "Pass");
 
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
@@ -116,8 +115,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void AccumHeightSearchResultMustBeSuccess()
         {
-            test = extent.StartTest("AccumHeightSearchResultMustBeSuccess");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("AccumHeightSearchResultMustBeSuccess");
+            //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             accumSelection.OpenAccumHeightDdl();
@@ -130,8 +129,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void AccumPolaritySearchResultMustBeSuccess()
         {
-            test = extent.StartTest("AccumPolaritySearchResultMustBeSuccess");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("AccumPolaritySearchResultMustBeSuccess");
+            //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             accumSelection.OpenAccumPolarityDdl();
@@ -144,8 +143,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void AccumTerminalSearchResultMustBeSuccess()
         {
-            test = extent.StartTest("AccumTerminalSearchResultMustBeSuccess");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("AccumTerminalSearchResultMustBeSuccess");
+            //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             accumSelection.OpenAccumTerminalDdl();
@@ -158,8 +157,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void AccumSelected1SearchResultMustBeSuccess()
         {
-            test = extent.StartTest("AccumSelected1SearchResultMustBeSuccess");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("AccumSelected1SearchResultMustBeSuccess");
+            //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             accumSelection.OpenAccumSelected1Ddl();
@@ -172,8 +171,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void AccumMustHavePrices()
         {
-            test = extent.StartTest("AccumMustHavePrices");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("AccumMustHavePrices");
+            //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;
@@ -185,8 +184,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void AccumMustHaveRests()
         {
-            test = extent.StartTest("AccumMustHaveRests");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("AccumMustHaveRests");
+            //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             var restsText = _browser.FindElement(By.CssSelector(".hidden-sm.hidden-xs")).Text;

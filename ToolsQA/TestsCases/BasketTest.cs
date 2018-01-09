@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using RelevantCodes.ExtentReports;
 using System.Collections.Generic;
 using ToolsQA.pages;
 
@@ -41,8 +40,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void AddCardToBasket()
         {
-            test = extent.StartTest("AddCartTest");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("AddCartTest");
+            //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementID("buttonBasketCreateInvoice");
             basketpage.InputBasketAddPosition("oc90");
@@ -68,8 +67,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void SaveInvoice()
         {
-            test = extent.StartTest("SaveInvoice");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("SaveInvoice");
+            //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementID("buttonBasketCreateInvoice");
             basketpage.InputBasketAddPosition("oc90");
@@ -83,8 +82,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void ReservationInvoice()
         {
-            test = extent.StartTest("ReservationInvoice");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("ReservationInvoice");
+            //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementID("buttonBasketCreateInvoice");
             basketpage.InputBasketAddPosition("oc90");
