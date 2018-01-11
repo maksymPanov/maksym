@@ -2,6 +2,7 @@
 using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.PhantomJS;
 using OpenQA.Selenium.Support.UI;
 using Protractor;
 using RelevantCodes.ExtentReports;
@@ -40,6 +41,7 @@ namespace ToolsQA.TestsCases
         public BaseTest()
         {
             _driver = new ChromeDriver(System.Reflection.Assembly.GetExecutingAssembly().Location.Replace("ToolsQA.exe", ""));
+            //_driver = new PhantomJSDriver();
             _driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(60);
             _browser = new NgWebDriver(_driver);
             _browser.Manage().Window.Maximize();
@@ -81,36 +83,36 @@ namespace ToolsQA.TestsCases
             IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(selector)));
         }
 
-        [TearDown]
-        public void TearDown()
-        {
-            var status = TestContext.CurrentContext.Result.Outcome.Status;
-            var stacktrace = string.IsNullOrEmpty(TestContext.CurrentContext.Result.StackTrace)
-                    ? ""
-                    : string.Format("<pre>{0}</pre>", TestContext.CurrentContext.Result.StackTrace);
-            LogStatus logstatus;
+        //[TearDown]
+        //public void TearDown()
+        //{
+            //    var status = TestContext.CurrentContext.Result.Outcome.Status;
+            //    var stacktrace = string.IsNullOrEmpty(TestContext.CurrentContext.Result.StackTrace)
+            //            ? ""
+            //            : string.Format("<pre>{0}</pre>", TestContext.CurrentContext.Result.StackTrace);
+            //    LogStatus logstatus;
 
-            switch (status)
-            {
-                case TestStatus.Failed:
-                    logstatus = LogStatus.Fail;
-                    break;
-                case TestStatus.Inconclusive:
-                    logstatus = LogStatus.Warning;
-                    break;
-                case TestStatus.Skipped:
-                    logstatus = LogStatus.Skip;
-                    break;
-                default:
-                    logstatus = LogStatus.Pass;
-                    break;
-            }
+            //    switch (status)
+            //    {
+            //        case TestStatus.Failed:
+            //            logstatus = LogStatus.Fail;
+            //            break;
+            //        case TestStatus.Inconclusive:
+            //            logstatus = LogStatus.Warning;
+            //            break;
+            //        case TestStatus.Skipped:
+            //            logstatus = LogStatus.Skip;
+            //            break;
+            //        default:
+            //            logstatus = LogStatus.Pass;
+            //            break;
+            //    }
 
-            test.Log(logstatus, "Test ended with " + logstatus + stacktrace);
+            //    test.Log(logstatus, "Test ended with " + logstatus + stacktrace);
 
-            extent.EndTest(test);
-            extent.Flush();
-        }
+        //    extent.EndTest(test);
+        //    extent.Flush();
+        //}
 
         [OneTimeTearDown]
         public void RunAfterAllTestsCloseBrowser()
