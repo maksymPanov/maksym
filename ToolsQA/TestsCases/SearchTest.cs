@@ -23,8 +23,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void SimpleSearchMustBeSuccess()
         {
-            test = extent.StartTest("SearchTest");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("SearchTest");
+            //test.Log(LogStatus.Pass, "Pass");
 
             dashboard.EnableSearch("4610495");
             WaitForElementID("addBasket");
@@ -38,8 +38,8 @@ namespace ToolsQA.TestsCases
         [Test]
         public void SearchOpenAnalogs()
         {
-            test = extent.StartTest("AnalogsTest");
-            test.Log(LogStatus.Pass, "Pass");
+            //test = extent.StartTest("AnalogsTest");
+            //test.Log(LogStatus.Pass, "Pass");
 
             dashboard.EnableSearch("6900260289");
             WaitForElementID("addBasket");

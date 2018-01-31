@@ -10,23 +10,23 @@ using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
 {
-    internal class ExtentManager
-    {
-        private static readonly ExtentReports _instance =
-            new ExtentReports("Extent.Net.html", DisplayOrder.OldestFirst);
+    //internal class ExtentManager
+    //{
+    //    private static readonly ExtentReports _instance =
+    //        new ExtentReports("Extent.Net.html", DisplayOrder.OldestFirst);
 
-        static ExtentManager() { }
+    //    static ExtentManager() { }
 
-        private ExtentManager() { }
+    //    private ExtentManager() { }
 
-        public static ExtentReports Instance
-        {
-            get
-            {
-                return _instance;
-            }
-        }
-    }
+    //    public static ExtentReports Instance
+    //    {
+    //        get
+    //        {
+    //            return _instance;
+    //        }
+    //    }
+    //}
 
 
     public class BaseTest
@@ -34,8 +34,8 @@ namespace ToolsQA.TestsCases
         protected string Url = "http://new.omega-auto.biz/#";
         protected readonly IWebDriver _driver;
         protected readonly NgWebDriver _browser;
-        protected ExtentReports extent;
-        protected ExtentTest test;
+        //protected ExtentReports extent;
+        //protected ExtentTest test;
 
         public BaseTest()
         {
@@ -49,12 +49,11 @@ namespace ToolsQA.TestsCases
         [OneTimeSetUp]
         public void RunBeforeAllTestLogin()
         {
-            extent = ExtentManager.Instance;
+            //extent = ExtentManager.Instance;
 
             var loginPage = new LoginPage(_browser);
             WaitForElementID("loginInputEmail");
             loginPage.LoginToApplication();
-
             _browser.WaitForAngular();
         }
 
@@ -81,36 +80,36 @@ namespace ToolsQA.TestsCases
             IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(selector)));
         }
 
-        [TearDown]
-        public void TearDown()
-        {
-            var status = TestContext.CurrentContext.Result.Outcome.Status;
-            var stacktrace = string.IsNullOrEmpty(TestContext.CurrentContext.Result.StackTrace)
-                    ? ""
-                    : string.Format("<pre>{0}</pre>", TestContext.CurrentContext.Result.StackTrace);
-            LogStatus logstatus;
+        //[TearDown]
+        //public void TearDown()
+        //{
+        //    var status = TestContext.CurrentContext.Result.Outcome.Status;
+        //    var stacktrace = string.IsNullOrEmpty(TestContext.CurrentContext.Result.StackTrace)
+        //            ? ""
+        //            : string.Format("<pre>{0}</pre>", TestContext.CurrentContext.Result.StackTrace);
+        //    LogStatus logstatus;
 
-            switch (status)
-            {
-                case TestStatus.Failed:
-                    logstatus = LogStatus.Fail;
-                    break;
-                case TestStatus.Inconclusive:
-                    logstatus = LogStatus.Warning;
-                    break;
-                case TestStatus.Skipped:
-                    logstatus = LogStatus.Skip;
-                    break;
-                default:
-                    logstatus = LogStatus.Pass;
-                    break;
-            }
+        //    switch (status)
+        //    {
+        //        case TestStatus.Failed:
+        //            logstatus = LogStatus.Fail;
+        //            break;
+        //        case TestStatus.Inconclusive:
+        //            logstatus = LogStatus.Warning;
+        //            break;
+        //        case TestStatus.Skipped:
+        //            logstatus = LogStatus.Skip;
+        //            break;
+        //        default:
+        //            logstatus = LogStatus.Pass;
+        //            break;
+        //    }
 
-            test.Log(logstatus, "Test ended with " + logstatus + stacktrace);
+        //    test.Log(logstatus, "Test ended with " + logstatus + stacktrace);
 
-            extent.EndTest(test);
-            extent.Flush();
-        }
+        //    extent.EndTest(test);
+        //    extent.Flush();
+        //}
 
         [OneTimeTearDown]
         public void RunAfterAllTestsCloseBrowser()

@@ -60,7 +60,7 @@ namespace ToolsQA.pages
         [CacheLookup]
         private IWebElement ButtonAccumSelected { get; set; }
 
-        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'60 мм')]")]
+        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'59 мм')]")]
         [CacheLookup]
         private IWebElement ParametrAsideChooseSelected { get; set; }
 
@@ -84,11 +84,11 @@ namespace ToolsQA.pages
         [CacheLookup]
         private IWebElement ButtonAccumTerminal { get; set; }
 
-        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'1')]")]
+        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'1+19')]")]
         [CacheLookup]
         private IWebElement ParametrAsideChooseTerminal { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='chatbar']/div/div/aside/div/section[2]/div[1]/div/div/accordion/div/div[4]/div/div[2]/div/accum-category/div/div[9]/div/span/button")]
+        [FindsBy(How = How.XPath, Using = ".//*[@id='chatbar']/div/div/aside/div/section[2]/div[1]/div/div/accordion/div/div[4]/div/div[2]/div/accum-category/div/div[9]/div/span/button")]
         [CacheLookup]
         private IWebElement ButtonAccumSelected1 { get; set; }
 

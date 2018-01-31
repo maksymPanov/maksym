@@ -41,8 +41,8 @@ namespace ToolsQA.TestsCases
 
             public void BodyAndOpticGroupSearchResultMustBeSuccess()
             {
-                test = extent.StartTest("BodyAndOpticGroupSearchResultMustBeSuccess");
-                test.Log(LogStatus.Pass, "Pass");
+                //test = extent.StartTest("BodyAndOpticGroupSearchResultMustBeSuccess");
+                //test.Log(LogStatus.Pass, "Pass");
 
                 WaitForElementXpath(".//*[@id='menu']/li[2]/span");
 
@@ -50,7 +50,7 @@ namespace ToolsQA.TestsCases
                 bodyAndOptic.ChooseParametrGroup();
                 bodyAndOptic.ClickOnButtonApplyInAdvancedSearch();
 
-                var SearchResultTires = _browser.FindElement(By.LinkText("8791047320"));
+                var SearchResultTires = _browser.FindElement(By.LinkText("7891709020"));
                 Assert.IsTrue(SearchResultTires.Displayed);
 
             }
@@ -58,8 +58,8 @@ namespace ToolsQA.TestsCases
 
             public void BodyAndOpticSideSearchResultMustBeSuccess()
             {
-                test = extent.StartTest("BodyAndOpticSideSearchResultMustBeSuccess");
-                test.Log(LogStatus.Pass, "Pass");
+                //test = extent.StartTest("BodyAndOpticSideSearchResultMustBeSuccess");
+                //test.Log(LogStatus.Pass, "Pass");
 
                 WaitForElementXpath(".//*[@id='menu']/li[2]/span");
 
@@ -74,8 +74,8 @@ namespace ToolsQA.TestsCases
             [Test]
             public void BodyAndOpticsMustHavePrices()
             {
-                test = extent.StartTest("BodyAndOpticsMustHavePrices");
-                test.Log(LogStatus.Pass, "Pass");
+                //test = extent.StartTest("BodyAndOpticsMustHavePrices");
+                //test.Log(LogStatus.Pass, "Pass");
 
                 WaitForElementXpath(".//*[@id='menu']/li[2]/span");
 
@@ -90,8 +90,8 @@ namespace ToolsQA.TestsCases
             [Test]
             public void BodyAndOpticsMustHaveRests()
             {
-                test = extent.StartTest("BodyAndOpticsMustHaveRests");
-                test.Log(LogStatus.Pass, "Pass");
+                //test = extent.StartTest("BodyAndOpticsMustHaveRests");
+                //test.Log(LogStatus.Pass, "Pass");
 
                 WaitForElementXpath(".//*[@id='menu']/li[2]/span");
 
