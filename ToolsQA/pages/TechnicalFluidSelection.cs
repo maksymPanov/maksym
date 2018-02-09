@@ -25,7 +25,7 @@ namespace ToolsQA.pages
         private IWebElement ButtonEnterAdvancedSearch { get; set; }
 
         [FindsBy(How = How.XPath, Using = ".//*[@id='chatbar']/div/div/aside/div/section[1]/accordion/div/h2/i")]
-        [CacheLookup]
+        [CacheLookup]                              
         private IWebElement ClickChatbar { get; set; }
 
         [FindsBy(How = How.Id, Using = "asideTFPurpose")]

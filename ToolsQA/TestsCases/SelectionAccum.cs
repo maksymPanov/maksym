@@ -45,13 +45,13 @@ namespace ToolsQA.TestsCases
             //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
-
             accumSelection.OpenAccumVoltageDdl();
             accumSelection.ChooseVoltage();
             accumSelection.ClickOnButtonApplyInAdvancedSearch();
-
-            var SearchResultTires = _browser.FindElement(By.LinkText("5237994734"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("5237994734"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("6v"));
         }
 
         [Test]
@@ -65,8 +65,11 @@ namespace ToolsQA.TestsCases
             accumSelection.OpenAccumCapacityDdl();
             accumSelection.ChooseCapasity();
             accumSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("EB5L-B"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("EB5L-B"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("5Ah"));
+
         }
 
         [Test]
@@ -80,25 +83,29 @@ namespace ToolsQA.TestsCases
             accumSelection.OpenAccumAmperegeDdl();
             accumSelection.ChooseAmperege();
             accumSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("EB4L-B"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("EB4L-B"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("EN50"));
         }
 
         [Test]
 
         public void AccumLengthSearchResultMustBeSuccess()
         {
-            //test = extent.StartTest("AccumLengthSearchResultMustBeSuccess");
-            //test.Log(LogStatus.Pass, "Pass");
 
-
-            WaitForElementXpath(".//*[@id='menu']/li[2]/span");
+            //WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             accumSelection.OpenAccumLengthDdl();
             accumSelection.ChooseLength();
             accumSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("6N11A-1B"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultByLength = _browser.FindElement(By.LinkText("6N11A-1B"));
+            //Assert.IsTrue(SearchResultByLength.Displayed);
+            
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("121"));
         }
+
 
         //[Test]
 
@@ -128,8 +135,10 @@ namespace ToolsQA.TestsCases
             accumSelection.OpenAccumHeightDdl();
             accumSelection.ChooseHeight();
             accumSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("5237994780"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("5237994780"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("104"));
         }
 
         [Test]
@@ -142,8 +151,10 @@ namespace ToolsQA.TestsCases
             accumSelection.OpenAccumPolarityDdl();
             accumSelection.ChoosePolarity();
             accumSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("6СТ-190 АЗ (3)"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("6СТ-190 АЗ (3)"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("L"));
         }
 
         [Test]
@@ -154,11 +165,12 @@ namespace ToolsQA.TestsCases
 
             WaitForElementXpath(".//*[@id='menu']/li[2]/span");
             accumSelection.OpenAccumTerminalDdl();
-            
             accumSelection.ChooseTerminal();
             accumSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("50 500"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("50 500"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("278x175x190"));
         }
 
         [Test]
@@ -171,8 +183,10 @@ namespace ToolsQA.TestsCases
             accumSelection.OpenAccumSelected1Ddl();
             accumSelection.ChooseSelected1();
             accumSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("6СТ-95A1 (1)"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("6СТ-95A1 (1)"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("азия"));
         }
 
         [Test]

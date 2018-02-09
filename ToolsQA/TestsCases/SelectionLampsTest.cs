@@ -49,8 +49,10 @@ namespace ToolsQA.TestsCases
             lampsSelection.ChooseLampsPower();
             lampsSelection.ClickOnButtonApplyInAdvancedSearch();
 
-            var SearchResultTires = _browser.FindElement(By.LinkText("12638CP"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("12638CP"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("1.12"));
         }
 
         [Test]
@@ -66,9 +68,30 @@ namespace ToolsQA.TestsCases
             lampsSelection.ChooseLampsBase();
             lampsSelection.ClickOnButtonApplyInAdvancedSearch();
 
-            var SearchResultTires = _browser.FindElement(By.LinkText("1 987 302 527"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("1 987 302 527"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("ВА15d"));
         }
+
+        //[Test]
+
+        //public void LampsVoltageSearchResultMustBeSuccess()
+        //{
+        //    //test = extent.StartTest("LampsXenonSearchResultMustBeSuccess");
+        //    //test.Log(LogStatus.Pass, "Pass");
+
+
+        //    WaitForElementXpath(".//*[@id='menu']/li[2]/span");
+        //    lampsSelection.OpenlampsVoltageDdl();
+        //    lampsSelection.ChooseLampsVoltage();
+        //    lampsSelection.ClickOnButtonApplyInAdvancedSearch();
+
+        //    //var SearchResultTires = _browser.FindElement(By.LinkText("66250"));
+        //    //Assert.IsTrue(SearchResultTires.Displayed);
+        //    WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+        //    Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("12"));
+        //}
 
         [Test]
 
@@ -83,8 +106,10 @@ namespace ToolsQA.TestsCases
             lampsSelection.ChooseLampsXenon();
             lampsSelection.ClickOnButtonApplyInAdvancedSearch();
 
-            var SearchResultTires = _browser.FindElement(By.LinkText("66250"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("66250"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("D2R"));
         }
 
         [Test]
@@ -98,7 +123,7 @@ namespace ToolsQA.TestsCases
             double number = 0;
             Assert.DoesNotThrow(() => number = double.Parse(priceText.Replace(".", ",")));
             Assert.Greater(number, 0);
-
+            
         }
 
         [Test]

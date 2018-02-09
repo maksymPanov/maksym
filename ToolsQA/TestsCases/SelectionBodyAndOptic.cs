@@ -45,13 +45,13 @@ namespace ToolsQA.TestsCases
                 //test.Log(LogStatus.Pass, "Pass");
 
                 WaitForElementXpath(".//*[@id='menu']/li[2]/span");
-
                 bodyAndOptic.OpenAsideOpticGroupDdl();
                 bodyAndOptic.ChooseParametrGroup();
                 bodyAndOptic.ClickOnButtonApplyInAdvancedSearch();
-
-                var SearchResultTires = _browser.FindElement(By.LinkText("7891709020"));
-                Assert.IsTrue(SearchResultTires.Displayed);
+                //var SearchResultTires = _browser.FindElement(By.LinkText("7891709020"));
+                //Assert.IsTrue(SearchResultTires.Displayed);
+                WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+                Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("ФАРА"));
 
             }
             [Test]
@@ -67,8 +67,10 @@ namespace ToolsQA.TestsCases
                 bodyAndOptic.ChooseParametrSide();
                 bodyAndOptic.ClickOnButtonApplyInAdvancedSearch();
 
-                var SearchResultTires = _browser.FindElement(By.LinkText("6182008D00"));
-                Assert.IsTrue(SearchResultTires.Displayed);
+                //var SearchResultTires = _browser.FindElement(By.LinkText("6182008D00"));
+                //Assert.IsTrue(SearchResultTires.Displayed);
+                WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+                Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("ПРА"));
 
             }
             [Test]

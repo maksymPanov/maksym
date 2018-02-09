@@ -45,8 +45,10 @@ namespace ToolsQA.TestsCases
             tiresSelection.OpenDiametrDdl();
             tiresSelection.ChooseDiametr();
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("205/65R15"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("205/65R15"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("15"));
 
         }
 
@@ -61,8 +63,10 @@ namespace ToolsQA.TestsCases
             tiresSelection.OpenSizeDdl();
             tiresSelection.ChooseSize();
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("1017412"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("1017412"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("/50"));
 
         }
 
@@ -78,7 +82,7 @@ namespace ToolsQA.TestsCases
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
             var SearchResultTires = _browser.FindElement(By.LinkText("TW00154"));
             Assert.IsTrue(SearchResultTires.Displayed);
-
+           
         }
 
         [Test]
@@ -93,6 +97,7 @@ namespace ToolsQA.TestsCases
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
             var SearchResultTires = _browser.FindElement(By.LinkText("TS01153"));
             Assert.IsTrue(SearchResultTires.Displayed);
+            
 
         }
 

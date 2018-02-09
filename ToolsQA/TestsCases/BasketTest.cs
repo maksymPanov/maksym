@@ -45,7 +45,7 @@ namespace ToolsQA.TestsCases
             //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementID("buttonBasketCreateInvoice");
-            basketpage.InputBasketAddPosition("oc90");
+            basketpage.InputBasketAddPosition("4610947337");
             _browser.WaitForAngular();
 
             var listRows = basketpage.BasketTable.FindElements(By.TagName("tr"));
@@ -61,7 +61,7 @@ namespace ToolsQA.TestsCases
             }
 
             Assert.Greater(listItems.Count, 0);
-            Assert.Contains("OC90", listItems);
+            Assert.Contains("RD.1430WL7086", listItems);
         }
 
 
@@ -72,7 +72,7 @@ namespace ToolsQA.TestsCases
             //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementID("buttonBasketCreateInvoice");
-            basketpage.InputBasketAddPosition("oc90");
+            basketpage.InputBasketAddPosition("4610947337");
             _browser.WaitForAngular();
             basketpage.SaveInvoice();
             WaitForElementID("openHeaderInvoice");
@@ -87,7 +87,7 @@ namespace ToolsQA.TestsCases
             //test.Log(LogStatus.Pass, "Pass");
 
             WaitForElementID("buttonBasketCreateInvoice");
-            basketpage.InputBasketAddPosition("oc90");
+            basketpage.InputBasketAddPosition("4610947337");
             _browser.WaitForAngular();
             basketpage.ReservationInvoice();
             WaitForElementID("openHeaderInvoice");

@@ -21,9 +21,21 @@ namespace ToolsQA.TestsCases
             WaitForElementID("sidebarCategoryOil");
             technicalFluidSelection.OpenSelectionOIL();
             technicalFluidSelection.OpenSelectionTechnicalFluid();
-            technicalFluidSelection.ChatbarHide();
+            //technicalFluidSelection.ChatbarHide();
         }
 
+        [SetUp]
+        public void CloseAdvancedsearchIfTheyOpen()
+        {
+            IWebElement headerMainFilter = _driver.FindElement(By.CssSelector(".header-main-filter"));
+            IWebElement checkBoxOnlyProductsInStock = _driver.FindElement(By.XPath("/html/body/div[2]/div[3]/div/div[2]/div/div/aside/div/section[1]/accordion/div/section/form/div[2]/div[1]/div[1]/label/span"));
+
+            if (checkBoxOnlyProductsInStock.Displayed)
+            {
+                headerMainFilter.Click();
+            }
+        }
+        
         [TearDown]
         public void ClearSearchParametrs()
         {
@@ -46,8 +58,10 @@ namespace ToolsQA.TestsCases
             technicalFluidSelection.OpenTFPurposeDdl();
             technicalFluidSelection.ChooseTFPurpose();
             technicalFluidSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("4802617334"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("4802617334"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("Жидкость торм"));
 
         }
 
@@ -63,8 +77,10 @@ namespace ToolsQA.TestsCases
             technicalFluidSelection.OpenTFColorDdl();
             technicalFluidSelection.ChooseTFColor();
             technicalFluidSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("26580"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("26580"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("зеленый"));
 
         }
 
@@ -78,8 +94,10 @@ namespace ToolsQA.TestsCases
             technicalFluidSelection.OpenTFSeasonalityDdl();
             technicalFluidSelection.ChooseTFSeasonality();
             technicalFluidSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("5363"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("5363"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("зим"));
 
         }
 
@@ -93,8 +111,10 @@ namespace ToolsQA.TestsCases
             technicalFluidSelection.OpenTFSpecOEMyDdl();
             technicalFluidSelection.ChooseTFSpecOEM();
             technicalFluidSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("12710"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("12710"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("G12"));
 
         }
 
@@ -108,8 +128,10 @@ namespace ToolsQA.TestsCases
             technicalFluidSelection.OpenTFScopeDdl();
             technicalFluidSelection.ChooseTFScope();
             technicalFluidSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("4102816901"));
-            Assert.IsTrue(SearchResultTires.Displayed);
+            //var SearchResultTires = _browser.FindElement(By.LinkText("4102816901"));
+            //Assert.IsTrue(SearchResultTires.Displayed);
+            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("0,1"));
 
         }
 

@@ -48,7 +48,7 @@ namespace ToolsQA.pages
         [CacheLookup]
         private IWebElement ButtonLampsVoltage { get; set; }
 
-        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'24')]")]
+        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'12')]")]
         [CacheLookup]
         private IWebElement ParametrChooseLampsVoltage { get; set; }
 

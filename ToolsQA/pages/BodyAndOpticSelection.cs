@@ -34,7 +34,7 @@ namespace ToolsQA.pages
         [CacheLookup]
         private IWebElement ButtonAsideOpticNbodySide { get; set; }
 
-        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'Зеркала')]")]
+        [FindsBy(How = How.XPath, Using = ".//*[@class='checkBoxContainer']//*[contains(text(),'Оптика')]")]
         [CacheLookup]
         private IWebElement ParametrGroup { get; set; }
 
