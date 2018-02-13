@@ -80,7 +80,7 @@ namespace ToolsQA.TestsCases
             tiresSelection.OpenSeasonDdl();
             tiresSelection.ChooseSeason();
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("TW00154"));
+            var SearchResultTires = _browser.FindElement(By.LinkText("4823044902842"));
             Assert.IsTrue(SearchResultTires.Displayed);
            
         }
@@ -95,7 +95,7 @@ namespace ToolsQA.TestsCases
             tiresSelection.OpenAppointmentDdl();
             tiresSelection.ChooseAppointment();
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("TS01153"));
+            var SearchResultTires = _browser.FindElement(By.LinkText("2355518PSSP"));
             Assert.IsTrue(SearchResultTires.Displayed);
             
 
