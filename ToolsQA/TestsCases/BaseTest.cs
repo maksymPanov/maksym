@@ -39,7 +39,7 @@ namespace ToolsQA.TestsCases
         public BaseTest()
         {
             // _driver = new ChromeDriver(System.Reflection.Assembly.GetExecutingAssembly().Location.Replace("ToolsQA.dll", ""));
-
+            Console.WriteLine("BASE CLASS ENTRY");
             var opts = new ChromeOptions();
             opts.PlatformName = "Windows";
 
