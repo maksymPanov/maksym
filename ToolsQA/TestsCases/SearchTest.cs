@@ -15,17 +15,20 @@ namespace ToolsQA.TestsCases
         }
 
         [TearDown]
-        public void Clear()
+        public void ClearSearchFild()
         {
-            dashboard.Clear();
+            dashboard.ClearHeaderSearchFild();
         }
+
+
+       
 
         [Test]
         public void SimpleSearchMustBeSuccess()
         {
             //test = extent.StartTest("SearchTest");
             //test.Log(LogStatus.Pass, "Pass");
-
+            WaitForElementID("headerInputSearch");                        
             dashboard.EnableSearch("4610495");
             WaitForElementID("addBasket");
             var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;

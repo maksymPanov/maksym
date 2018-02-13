@@ -46,9 +46,9 @@ namespace ToolsQA.pages
         }
               
     
-        public void Clear()
+        public void ClearHeaderSearchFild()
         {
-            _driver.Navigate().Refresh();
+            _driver.FindElement(By.XPath("/html/body/div[2]/div[2]/div/div[1]/div/div[2]/div/i")).Click();
         }
 
         public void EnableSearch(string text)
