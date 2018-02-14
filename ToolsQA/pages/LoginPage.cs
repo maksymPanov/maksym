@@ -27,8 +27,8 @@ namespace ToolsQA.pages
 
         public void LoginToApplication()
         {
-            UserName.SendKeys("Панов Максим");
-            Password.SendKeys("aere7bvf");
+            UserName.SendKeys("igordobrobaba@gmail.com");
+            Password.SendKeys("qwerty1");
             Submit.Click();
         }
     }

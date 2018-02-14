@@ -71,17 +71,7 @@ namespace ToolsQA.TestsCases
 
         }
 
-        [Test]
-        public void OilVolumetResultMustBeSuccess()
-        {
-            WaitForElementXpath(".//*[@id='menu']/li[2]/span");
-            oilSelection.OpenOilVolumeDdl();
-            oilSelection.ChooseOilVolume();
-            oilSelection.ClickOnButtonApplyInAdvancedSearch();
-            WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
-            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("6"));
-
-        }
+      
 
         [Test]
         public void OilApplicabilityResultMustBeSuccess()
@@ -167,6 +157,18 @@ namespace ToolsQA.TestsCases
             Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("Масло трансмисс"));
 
         }
+
+        //[Test]
+        //public void OilVolumetResultMustBeSuccess()
+        //{
+        //    WaitForElementXpath(".//*[@id='menu']/li[2]/span");
+        //    oilSelection.OpenOilVolumeDdl();
+        //    oilSelection.ChooseOilVolume();
+        //    oilSelection.ClickOnButtonApplyInAdvancedSearch();
+        //    WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+        //    Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("Масло"));
+
+        //}
 
         //[Test]
         //public void OilSpecificationsISOResultMustBeSuccess()

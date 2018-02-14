@@ -14,8 +14,10 @@ namespace ToolsQA.TestsCases
         {
             //test = extent.StartTest("LoginTest");
             //test.Log(LogStatus.Pass, "Pass");
+            WaitForElementCSS("#sidebar > ul > li.active > a");
+                
 
-            Assert.IsTrue(_browser.Url.Contains("dashboard"));
+            //Assert.IsTrue(_browser.Url.Contains("dashboard"));
         }
     }
 }

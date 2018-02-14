@@ -43,7 +43,7 @@ namespace ToolsQA.TestsCases
         {
             //test = extent.StartTest("AnalogsTest");
             //test.Log(LogStatus.Pass, "Pass");
-
+            WaitForElementID("headerInputSearch");
             dashboard.EnableSearch("6900260289");
             WaitForElementID("addBasket");
             dashboard.LoadMoreAnalog();

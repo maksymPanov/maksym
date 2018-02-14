@@ -13,10 +13,7 @@ E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\WebDriver.Support.xml
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.csprojResolveAssemblyReference.cache
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.pdb
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\RelevantCodes.ExtentReports.dll
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\ToolsQA.exe.config
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\obj\Debug\ToolsQA.exe
 C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\obj\Debug\ToolsQA.pdb
-C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\ToolsQA.exe
 C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\ToolsQA.pdb
 C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\nunit.framework.dll
 C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\NUnitGoCore.dll
@@ -34,3 +31,6 @@ C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\obj\Debug\ToolsQA.cspro
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\ToolsQA.dll.config
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\bin\Debug\ToolsQA.dll
 E:\Rezenkov\Projects\omega.autotest\ToolsQA\obj\Debug\ToolsQA.dll
+C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\ToolsQA.dll.config
+C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\bin\Debug\ToolsQA.dll
+C:\Users\igor.dobrobaba\Documents\omega.autotest\ToolsQA\obj\Debug\ToolsQA.dll
