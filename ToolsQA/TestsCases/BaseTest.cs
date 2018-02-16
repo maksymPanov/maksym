@@ -63,7 +63,7 @@ namespace ToolsQA.TestsCases
             _browser.WaitForAngular();
         }
 
-        public void OpenDeashbordPage()
+        public void OpenDeashbordPage()  
         {
             var dashboard = new DashboardPage(_browser);
         }
