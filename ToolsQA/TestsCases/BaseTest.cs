@@ -55,7 +55,7 @@ namespace ToolsQA.TestsCases
         [OneTimeSetUp]
         public void RunBeforeAllTestLogin()
         {
-            //extent = ExtentManager.Instance;
+            /////extent = ExtentManager.Instance;
 
             var loginPage = new LoginPage(_browser);
             WaitForElementID("loginInputEmail");
