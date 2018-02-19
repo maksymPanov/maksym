@@ -1,7 +1,5 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using RelevantCodes.ExtentReports;
-using System.Collections.Generic;
 using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
@@ -44,24 +42,24 @@ namespace ToolsQA.TestsCases
             //test = extent.StartTest("AddCartTest");
             //test.Log(LogStatus.Pass, "Pass");
 
-            WaitForElementID("buttonBasketCreateInvoice");
-            basketpage.InputBasketAddPosition("4610947337");
-            _browser.WaitForAngular();
+            //WaitForElementID("buttonBasketCreateInvoice");
+            //basketpage.InputBasketAddPosition("4610947337");
+            //_browser.WaitForAngular();
 
-            var listRows = basketpage.BasketTable.FindElements(By.TagName("tr"));
-            var listItems = new List<string>();
+            //var listRows = basketpage.BasketTable.FindElements(By.TagName("tr"));
+            //var listItems = new List<string>();
 
-            for (var i = 1; i < listRows.Count; i++)
-            {
-                var rowItem = basketpage.BasketTable.FindElement(By.XPath($".//tbody/tr[{i}]/td[3]"));
-                if (rowItem != null && rowItem.Text != "")
-                {
-                    listItems.Add(rowItem.Text);
-                }
-            }
+            //for (var i = 1; i < listRows.Count; i++)
+            //{
+            //    var rowItem = basketpage.BasketTable.FindElement(By.XPath($".//tbody/tr[{i}]/td[3]"));
+            //    if (rowItem != null && rowItem.Text != "")
+            //    {
+            //        listItems.Add(rowItem.Text);
+            //    }
+            //}
 
-            Assert.Greater(listItems.Count, 0);
-            Assert.Contains("RD.1430WL7086", listItems);
+            //Assert.Greater(listItems.Count, 0);
+            //Assert.Contains("RD.1430WL7086", listItems);
         }
 
 
@@ -71,13 +69,13 @@ namespace ToolsQA.TestsCases
             //test = extent.StartTest("SaveInvoice");
             //test.Log(LogStatus.Pass, "Pass");
 
-            WaitForElementID("buttonBasketCreateInvoice");
-            basketpage.InputBasketAddPosition("4610947337");
-            _browser.WaitForAngular();
-            basketpage.SaveInvoice();
-            WaitForElementID("openHeaderInvoice");
-            var invoiceStatus = _driver.FindElement(By.XPath(".//*[@id='openHeaderInvoice']/table/tbody/tr/td[2]"));
-            Assert.True(invoiceStatus.Text.Contains("Сохранён"));
+            //WaitForElementID("buttonBasketCreateInvoice");
+            //basketpage.InputBasketAddPosition("4610947337");
+            //_browser.WaitForAngular();
+            //basketpage.SaveInvoice();
+            //WaitForElementID("openHeaderInvoice");
+            //var invoiceStatus = _driver.FindElement(By.XPath(".//*[@id='openHeaderInvoice']/table/tbody/tr/td[2]"));
+            //Assert.True(invoiceStatus.Text.Contains("Сохранён"));
         }
 
         [Test]
