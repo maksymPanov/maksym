@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using RelevantCodes.ExtentReports;
 using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
@@ -82,7 +81,7 @@ namespace ToolsQA.TestsCases
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
             var SearchResultTires = _browser.FindElement(By.LinkText("4823044902842"));
             Assert.IsTrue(SearchResultTires.Displayed);
-           
+
         }
 
         [Test]
@@ -97,7 +96,7 @@ namespace ToolsQA.TestsCases
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
             var SearchResultTires = _browser.FindElement(By.LinkText("1020988-1"));
             Assert.IsTrue(SearchResultTires.Displayed);
-            
+
 
         }
 

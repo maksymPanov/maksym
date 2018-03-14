@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using RelevantCodes.ExtentReports;
 using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
@@ -21,14 +20,14 @@ namespace ToolsQA.TestsCases
         }
 
 
-       
+
 
         [Test]
         public void SimpleSearchMustBeSuccess()
         {
             //test = extent.StartTest("SearchTest");
             //test.Log(LogStatus.Pass, "Pass");
-            WaitForElementID("headerInputSearch");                        
+            WaitForElementID("headerInputSearch");
             dashboard.EnableSearch("4610495");
             WaitForElementID("addBasket");
             var priceText = _browser.FindElement(By.CssSelector("td:nth-child(8) > span")).Text;

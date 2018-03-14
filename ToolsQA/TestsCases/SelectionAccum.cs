@@ -1,8 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using RelevantCodes.ExtentReports;
 using ToolsQA.pages;
-using System.Threading;
 
 namespace ToolsQA.TestsCases
 {
@@ -28,13 +26,13 @@ namespace ToolsQA.TestsCases
         public void ClearSearchParametrs()
         {
             _browser.WaitForAngular();
-            
+
             var removeLables = _browser.FindElements(By.XPath(".//*[@id='menu']/object/li[1]/span"));
             for (var i = 0; i < removeLables.Count; i++)
             {
                 removeLables[i].Click();
             }
-            
+
 
         }
         [Test]
@@ -101,7 +99,7 @@ namespace ToolsQA.TestsCases
             accumSelection.ClickOnButtonApplyInAdvancedSearch();
             //var SearchResultByLength = _browser.FindElement(By.LinkText("6N11A-1B"));
             //Assert.IsTrue(SearchResultByLength.Displayed);
-            
+
             WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
             Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("121"));
         }

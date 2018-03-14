@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using RelevantCodes.ExtentReports;
 using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases

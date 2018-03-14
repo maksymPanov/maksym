@@ -55,7 +55,7 @@ namespace ToolsQA.TestsCases
         [OneTimeSetUp]
         public void RunBeforeAllTestLogin()
         {
-            //extent = ExtentManager.Instance;
+            /////extent = ExtentManager.Instance;
 
             var loginPage = new LoginPage(_browser);
             WaitForElementID("loginInputEmail");
@@ -63,26 +63,26 @@ namespace ToolsQA.TestsCases
             _browser.WaitForAngular();
         }
 
-        public void OpenDeashbordPage()
+        public void OpenDeashbordPage()  
         {
             var dashboard = new DashboardPage(_browser);
         }
 
         public void WaitForElementID(string selector)
         {
-            WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(30));
+            WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(120));
             IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.Id(selector)));
         }
 
         public void WaitForElementCSS(string selector)
         {
-            WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(30));
+            WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(120));
             IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(selector)));
         }
 
         public void WaitForElementXpath(string selector)
         {
-            WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(30));
+            WebDriverWait wait = new WebDriverWait(_browser, TimeSpan.FromSeconds(120));
             IWebElement element = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath(selector)));
         }
 

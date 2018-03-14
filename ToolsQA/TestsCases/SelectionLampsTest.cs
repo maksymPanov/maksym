@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using RelevantCodes.ExtentReports;
 using ToolsQA.pages;
 
 namespace ToolsQA.TestsCases
@@ -123,7 +122,7 @@ namespace ToolsQA.TestsCases
             double number = 0;
             Assert.DoesNotThrow(() => number = double.Parse(priceText.Replace(".", ",")));
             Assert.Greater(number, 0);
-            
+
         }
 
         [Test]
