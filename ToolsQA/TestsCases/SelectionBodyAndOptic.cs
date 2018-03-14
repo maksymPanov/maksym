@@ -48,10 +48,10 @@ namespace ToolsQA.TestsCases
                 bodyAndOptic.OpenAsideOpticGroupDdl();
                 bodyAndOptic.ChooseParametrGroup();
                 bodyAndOptic.ClickOnButtonApplyInAdvancedSearch();
-                //var SearchResultTires = _browser.FindElement(By.LinkText("7891709020"));
-                //Assert.IsTrue(SearchResultTires.Displayed);
-                WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
-                Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("ФАРА"));
+                var SearchResultTires = _browser.FindElement(By.LinkText("8148048020"));
+                Assert.IsTrue(SearchResultTires.Displayed);
+                //WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
+                //Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("ФАРА"));
 
             }
             [Test]

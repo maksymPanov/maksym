@@ -95,7 +95,7 @@ namespace ToolsQA.TestsCases
             tiresSelection.OpenAppointmentDdl();
             tiresSelection.ChooseAppointment();
             tiresSelection.ClickOnButtonApplyInAdvancedSearch();
-            var SearchResultTires = _browser.FindElement(By.LinkText("2355518PSSP"));
+            var SearchResultTires = _browser.FindElement(By.LinkText("1020988-1"));
             Assert.IsTrue(SearchResultTires.Displayed);
             
 
