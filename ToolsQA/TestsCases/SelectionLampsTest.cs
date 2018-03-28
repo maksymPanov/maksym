@@ -70,7 +70,7 @@ namespace ToolsQA.TestsCases
             //var SearchResultTires = _browser.FindElement(By.LinkText("1 987 302 527"));
             //Assert.IsTrue(SearchResultTires.Displayed);
             WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
-            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("ВА15d"));
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("Лампа"));
         }
 
         //[Test]

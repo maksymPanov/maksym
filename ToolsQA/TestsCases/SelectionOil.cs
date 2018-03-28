@@ -80,7 +80,7 @@ namespace ToolsQA.TestsCases
             oilSelection.ChooseOilApplicability();
             oilSelection.ClickOnButtonApplyInAdvancedSearch();
             WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
-            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("Масло промывочное"));
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("Масл"));
 
         }
 

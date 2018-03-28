@@ -38,12 +38,12 @@ namespace ToolsQA.TestsCases
 
         public BaseTest()
         {
-            // _driver = new ChromeDriver(System.Reflection.Assembly.GetExecutingAssembly().Location.Replace("ToolsQA.dll", ""));
-            Console.WriteLine("BASE CLASS ENTRY");
+             _driver = new ChromeDriver(System.Reflection.Assembly.GetExecutingAssembly().Location.Replace("ToolsQA.dll", ""));
+            //Console.WriteLine("BASE CLASS ENTRY");
             var opts = new ChromeOptions();
             opts.PlatformName = "Windows";
 
-            _driver = new RemoteWebDriver(new Uri("http://192.168.100.32:5555/wd/hub"), opts.ToCapabilities(), TimeSpan.FromMinutes(1));
+            //_driver = new RemoteWebDriver(new Uri("http://192.168.100.32:5555/wd/hub"), opts.ToCapabilities(), TimeSpan.FromMinutes(1));
             _driver.Manage().Timeouts().AsynchronousJavaScript = TimeSpan.FromSeconds(60);
             _driver.Manage().Window.Maximize();
             _browser = new NgWebDriver(_driver);
