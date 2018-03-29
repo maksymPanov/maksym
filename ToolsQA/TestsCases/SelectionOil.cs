@@ -66,7 +66,7 @@ namespace ToolsQA.TestsCases
             oilSelection.ChooseOilViscosity();
             oilSelection.ClickOnButtonApplyInAdvancedSearch();
             WaitForElementCSS(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)");
-            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("HP-DIESEL 10W40"));
+            Assert.IsTrue(_driver.FindElement(By.CssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(4) > div:nth-child(1)")).Text.Contains("Масло"));
 
         }
 
